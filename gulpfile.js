@@ -103,7 +103,7 @@ gulp.task('build', ['html','sass','js']);
 // Watching for changes
 gulp.task('watch', function () {
   gulp.watch(paths.html, ['html']);
-  gulp.watch('/sass/**/*.scss', ['sass']);
+  gulp.watch('./sass/*.scss', ['sass']);
   gulp.watch(paths.jsscript, ['js']);
   gulp.watch(paths.jsdata, ['js']);
   gulp.watch('./public/**/*', ['livereload']);
