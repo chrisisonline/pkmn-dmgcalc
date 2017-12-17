@@ -11,8 +11,8 @@
 </head>
 
 <body>
-
-<nav><div class="header"><div class="header-inner">
+<!-- I HID THIS -->
+<nav hidden><div class="header"><div class="header-inner">
     <ul class="nav">
         <li><a class="button nav-first" href="/"><img src="./pokemonshowdownbeta.png" alt="Pok&eacute;mon Showdown! (beta)" /> Home</a></li>
         <li><a class="button" href="/dex/">Pok&eacute;dex</a></li>
@@ -55,10 +55,12 @@
     <hr style="border-width: 0px;"/>
 
     <div aria-label="Move selection" class="move-result-group" role="region" title="Select a move to show detailed results.">
+            
         <div  aria-labelledby="resultHeaderL" class="move-result-subgroup" role="radiogroup">
             <!-- I HID THIS -->
             <div class="result-move-header" hidden><span id="resultHeaderL">Pok&eacute;mon 1's Moves (select one to show detailed results)</span>
             </div>
+            <div><img src="./gui-pika.png"></div>
             <div>
                 <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveL1" checked="checked" aria-describedby="resultDamageL1" />
                 <label class="btn btn-xxxwide btn-top" for="resultMoveL1">Hi Jump Kick</label>
@@ -80,10 +82,14 @@
                 <span id="resultDamageL4">??? - ???%</span>
             </div>
         </div>
+
+        <div class="move-result-subgroup"><img src="gui-logo.png"></div>
+        
         <div aria-labelledby="resultHeaderR" class="move-result-subgroup" role="radiogroup">
             <!-- I HID THIS -->
             <div class="result-move-header" hidden><span id="resultHeaderR">Pok&eacute;mon 2's Moves (select one to show detailed results)</span>
             </div>
+            <div><img src="./gui-char.png"></div>
             <div>
                 <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveR1" aria-describedby="resultDamageR1" />
                 <label class="btn btn-xxxwide btn-top" for="resultMoveR1">???</label>
