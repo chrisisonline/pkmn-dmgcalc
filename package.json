@@ -34,6 +34,11 @@
     "eslint-plugin-html": "^4.0.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-prettier": "^2.3.1",
-    "eslint-plugin-promise": "^3.6.0"
+    "eslint-plugin-promise": "^3.6.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-minify": "^2.1.0",
+    "gulp-sass": "^3.1.0"
   }
 }
