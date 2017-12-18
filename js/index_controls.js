@@ -87,7 +87,7 @@ function calculate() {
 		result.damageText = minDamage + "-" + maxDamage + " (" + minDisplay + " - " + maxDisplay + notation + ")";
 		result.koChanceText = p2.moves[i].bp === 0 ? 'nice move' :
 			getKOChanceText(result.damage, p2, p1, field.getSide(0), p2.moves[i], p2.moves[i].hits, p2.ability === 'Bad Dreams');
-		if (p2.moves[i].givesHealth) {
+		/*if (p2.moves[i].givesHealth) {
 			var minHealthRecovered = notation === '%' ? Math.floor(minDamage * p2.moves[i].percentHealed * 1000 / p2.maxHP) /
                 10 : Math.floor(minDamage * p2.moves[i].percentHealed * 48 / p2.maxHP);
 			var maxHealthRecovered = notation === '%' ? Math.floor(maxDamage * p2.moves[i].percentHealed * 1000 / p2.maxHP) /
@@ -100,7 +100,7 @@ function calculate() {
 					maxHealthRecovered = 48;
 				}
 			recoveryText = ' (' + minHealthRecovered + ' - ' + maxHealthRecovered + notation + ' recovered)';
-		}
+		}*/
 		$(resultLocations[1][i].move + " + label").text(p2.moves[i].name.replace("Hidden Power", "HP"));
 		$(resultLocations[1][i].damage).text(minDisplay + " - " + maxDisplay + notation + recoveryText);
 		if (fastestSide === "tie") {
@@ -131,6 +131,10 @@ $(".result-move").change(function () {
 		if (result) {
 			$("#mainResult").text(result.description + ": " + result.damageText + " -- " + result.koChanceText);
 			$("#damageValues").text("Possible damage amounts: (" + result.damage.join(", ") + ")");
+			// CJ EDITS
+			// Adds simplified text to the main display
+			$("#simpleMain").text("Damage: " + result.damageText);
+			$("#simpleKO").text("KO Chance: " + result.koChanceText);
 		}
 	}
 });
@@ -182,3 +186,17 @@ $(document).ready(function () {
 	});
 	calculate();
 });
+
+// CJ EDITS
+
+// When moves are selected add class for formatting
+$(".result-move").click(function () { 
+  $(".btn-move").removeClass("move-selected");
+  $(this).parent(".btn-move").addClass("move-selected");
+});
+
+// Create a shortened form of the main text
+$(".main-result-group").change(function () {
+	// body...
+})
+

@@ -124,6 +124,7 @@ a img {
 
 /* general page styling */
 * {
+  color: #4D4D4D;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -150,7 +151,6 @@ div.wrapper > div > span {
 
 fieldset {
   float: left;
-  background-color: #F1F4F9;
   border: 1px solid #AAAAAA; }
 
 legend {
@@ -178,11 +178,18 @@ th {
   font-size: 0.8em; }
 
 .panel {
-  float: left;
-  display: inline-block; }
+  width: 50%;
+  float: left; }
 
 .poke-info {
-  width: 30em; }
+  width: 99%;
+  margin: 0; }
+
+#p1 {
+  margin-right: 1%; }
+
+#p2 {
+  margin-left: 1%; }
 
 .field-info, .poke-import {
   text-align: center;
@@ -297,17 +304,16 @@ th {
     margin: 0 auto; }
   .move-result-subgroup .btn-move {
     position: relative;
-    width: 46%;
-    margin: 1%;
+    width: 48%;
+    margin: 0.5%;
     padding: 2%;
-    border: 1px solid #5AB1D6; }
+    border: 1px solid; }
     .move-result-subgroup .btn-move:hover {
       -webkit-transition: all 0.15s ease-in;
       -moz-transition: all 0.15s ease-in;
       -ms-transition: all 0.15s ease-in;
       -o-transition: all 0.15s ease-in;
-      transition: all 0.15s ease-in;
-      background-color: #D3E4EA; }
+      transition: all 0.15s ease-in; }
     .move-result-subgroup .btn-move label, .move-result-subgroup .btn-move span, .move-result-subgroup .btn-move input {
       text-align: center;
       display: block; }
@@ -324,16 +330,37 @@ th {
       font-size: 14px;
       font-style: italic;
       margin-top: 15%; }
+  .move-result-subgroup .lmoves {
+    border-color: #5AB1D6; }
+    .move-result-subgroup .lmoves:hover {
+      background-color: #D3E4EA; }
+  .move-result-subgroup .rmoves {
+    border-color: #CC6666; }
+    .move-result-subgroup .rmoves:hover {
+      background-color: #DDB1B1; }
+  .move-result-subgroup .move-selected.lmoves {
+    background-color: #D3E4EA; }
+  .move-result-subgroup .move-selected.rmoves {
+    background-color: #DDB1B1; }
+  .move-result-subgroup .move-selected label {
+    font-weight: bold; }
 
 #gui-logo {
   width: 80%;
-  padding: 5% 10%; }
+  padding: 10%; }
 
 .move-result-group .btn {
   margin-right: 1em; }
 
 .main-result-group {
   margin: 2em 0 1em; }
+
+.simple-results {
+  display: block;
+  margin: 0 auto;
+  width: 85%;
+  text-align: center;
+  font-size: 18px; }
 
 .result-move-header {
   font-size: 0.8em;

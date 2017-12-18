@@ -1,0 +1,14 @@
+// Mix-ins
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+// Colours
+$grey-1: #4D4D4D;
+$blue: #5AB1D6;
+$light-blue: #D3E4EA;
+$red: #CC6666;
+$light-red: #DDB1B1;
