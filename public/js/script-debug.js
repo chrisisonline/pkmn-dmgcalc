@@ -1116,6 +1116,13 @@ $(".main-result-group").change(function () {
 	// body...
 })
 
+// Making the main results a popup window
+$("#show-btn").click(function(){
+	$("#show-details").toggle();
+});
+$("#close-btn").click(function(){
+	$("#show-details").toggle();
+});
 
 function CALCULATE_ALL_MOVES_BW(p1, p2, field) {
 	checkAirLock(p1, field);
