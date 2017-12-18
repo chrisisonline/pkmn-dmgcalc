@@ -195,6 +195,7 @@ th {
         margin: 0 auto;
     }
     .btn-move {
+        position: relative;
         width: 46%;
         margin: 1%;
         padding: 2%;
@@ -209,11 +210,19 @@ th {
             display: block;
         }
         label {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding-top: 5%;
             font-size: 16px;
         }
         span{
+            z-index: -1;
             font-size: 14px;
-            font-style: italic
+            font-style: italic;
+            margin-top: 15%;
         }
     }
 }
