@@ -123,13 +123,22 @@ a img {
   border-color: #5e8849; }
 
 /* general page styling */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif; }
+
 html, body {
   font: 10pt Verdana, sans-serif;
   background-color: white;
   color: black;
   margin: 0;
-  padding: 0;
-  min-width: 100em; }
+  padding: 0; }
+
+div {
+  display: inline-block;
+  overflow: hidden; }
 
 .wrapper {
   padding: 0 1em;
@@ -278,14 +287,38 @@ th {
   background: #ffff99; }
 
 /* header */
-.move-result-group {
-  max-width: 80em;
-  min-width: 50em;
-  margin: 1em 0 11.5em; }
-
 .move-result-subgroup {
   float: left;
   width: 33%; }
+  .move-result-subgroup img {
+    width: 96%;
+    padding: 2%;
+    display: block;
+    margin: 0 auto; }
+  .move-result-subgroup .btn-move {
+    width: 46%;
+    margin: 1%;
+    padding: 2%;
+    border: 1px solid #5AB1D6; }
+    .move-result-subgroup .btn-move:hover {
+      -webkit-transition: all 0.15s ease-in;
+      -moz-transition: all 0.15s ease-in;
+      -ms-transition: all 0.15s ease-in;
+      -o-transition: all 0.15s ease-in;
+      transition: all 0.15s ease-in;
+      background-color: #D3E4EA; }
+    .move-result-subgroup .btn-move label, .move-result-subgroup .btn-move span, .move-result-subgroup .btn-move input {
+      text-align: center;
+      display: block; }
+    .move-result-subgroup .btn-move label {
+      font-size: 16px; }
+    .move-result-subgroup .btn-move span {
+      font-size: 14px;
+      font-style: italic; }
+
+#gui-logo {
+  width: 80%;
+  padding: 5% 10%; }
 
 .move-result-group .btn {
   margin-right: 1em; }

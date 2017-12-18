@@ -1,11 +1,32 @@
+// Mix-ins
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+// Colours
+$blue: #5AB1D6;
+$light-blue: #D3E4EA;
+
 /* general page styling */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
 html, body {
     font: 10pt Verdana, sans-serif;
     background-color: white;
     color: black;
     margin: 0;
     padding: 0;
-    min-width: 100em;
+}
+div {
+    display: inline-block;
+    overflow: hidden;
 }
 .wrapper {
     padding: 0 1em;
@@ -159,13 +180,46 @@ th {
 
 /* header */
 .move-result-group {
-    max-width: 80em;
-    min-width: 50em;
-    margin: 1em 0 11.5em;
+    // max-width: 80em;
+    // min-width: 50em;
+    // margin: 1em 0 11.5em;
 }
 .move-result-subgroup {
     float: left;
     width: 33%;
+
+    img {
+        width: 96%;
+        padding: 2%;
+        display: block;
+        margin: 0 auto;
+    }
+    .btn-move {
+        width: 46%;
+        margin: 1%;
+        padding: 2%;
+        border: 1px solid $blue;
+        &:hover {
+            @include transition(all 0.15s ease-in);
+            background-color: $light-blue;
+        }
+
+        label, span, input {
+            text-align: center;
+            display: block;
+        }
+        label {
+            font-size: 16px;
+        }
+        span{
+            font-size: 14px;
+            font-style: italic
+        }
+    }
+}
+#gui-logo {
+    width: 80%;
+    padding: 5% 10%;
 }
 .move-result-group .btn {
     margin-right: 1em;

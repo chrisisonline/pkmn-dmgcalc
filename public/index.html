@@ -7,6 +7,9 @@
     <!-- <link type="text/css" rel="stylesheet" href="./select2/select2.css" />
     <link type="text/css" rel="stylesheet" href="./shared_controls.css?" />
     <link type="text/css" rel="stylesheet" href="./bootstrap.css" /> -->
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./css/styles.css" />
 </head>
 
@@ -60,36 +63,36 @@
             <!-- I HID THIS -->
             <div class="result-move-header" hidden><span id="resultHeaderL">Pok&eacute;mon 1's Moves (select one to show detailed results)</span>
             </div>
-            <div><img src="./gui-pika.png"></div>
-            <div>
+            <img src="./gui-pika.png">
+            <div class="btn-move">
                 <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveL1" checked="checked" aria-describedby="resultDamageL1" />
-                <label class="btn btn-xxxwide btn-top" for="resultMoveL1">Hi Jump Kick</label>
+                <label class="" for="resultMoveL1">Hi Jump Kick</label>
                 <span id="resultDamageL1">??? - ???%</span>
             </div>
-            <div>
+            <div class="btn-move">
                 <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveL2" aria-describedby="resultDamageL2" />
-                <label class="btn btn-xxxwide btn-mid" for="resultMoveL2">Falcon Punch</label>
+                <label class="" for="resultMoveL2">Falcon Punch</label>
                 <span id="resultDamageL2">??? - ???%</span>
             </div>
-            <div>
+            <div class="btn-move">
                 <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveL3" aria-describedby="resultDamageL3" />
-                <label class="btn btn-xxxwide btn-mid" for="resultMoveL3">Suspicious Odor</label>
+                <label class="" for="resultMoveL3">Suspicious Odor</label>
                 <span id="resultDamageL3">??? - ???%</span>
             </div>
-            <div>
+            <div class="btn-move">
                 <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveL4" aria-describedby="resultDamageL4" />
-                <label class="btn btn-xxxwide btn-bottom" for="resultMoveL4">Tombstoner</label>
+                <label class="" for="resultMoveL4">Tombstoner</label>
                 <span id="resultDamageL4">??? - ???%</span>
             </div>
         </div>
 
-        <div class="move-result-subgroup"><img src="gui-logo.png"></div>
+        <div class="move-result-subgroup"><img id="gui-logo" src="gui-logo.png"></div>
         
         <div aria-labelledby="resultHeaderR" class="move-result-subgroup" role="radiogroup">
             <!-- I HID THIS -->
             <div class="result-move-header" hidden><span id="resultHeaderR">Pok&eacute;mon 2's Moves (select one to show detailed results)</span>
             </div>
-            <div><img src="./gui-char.png"></div>
+            <img src="./gui-char.png">
             <div>
                 <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveR1" aria-describedby="resultDamageR1" />
                 <label class="btn btn-xxxwide btn-top" for="resultMoveR1">???</label>
