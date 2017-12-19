@@ -2069,17 +2069,14 @@ a img {
   font-family: 'Raleway', sans-serif; }
 
 /* select2 overrides */
-.select2-container {
-  height: 1.75em; }
-  .select2-container .select2-choice {
-    font-size: 0.75rem;
-    height: 1.75rem; }
-
 .select2-container .select2-choice > .select2-chosen {
   width: 100%; }
 
 .select2-drop .select2-results, .select2-drop .select2-search {
   font-size: 0.75rem; }
+
+.select2-drop .select2-results .select2-highlighted {
+  background: #F2F2F2; }
 
 /* 
 .small-select.select2-container .select2-choice .select2-arrow b {
@@ -2135,21 +2132,26 @@ th {
   font-size: 0.875rem; }
 
 .panel {
-  width: 49%;
+  width: 48%;
   float: left; }
+
+.pkm-1 {
+  margin-right: 2%; }
+
+.pkm-2 {
+  margin-left: 1.5%; }
 
 .poke-info {
   width: 100%;
   margin: 0;
+  float: left;
   position: relative; }
 
 #p1 {
-  border-color: #5AB1D6;
-  margin-right: 1%; }
+  border-color: #5AB1D6; }
 
 #p2 {
-  border-color: #CC6666;
-  margin-left: 1%; }
+  border-color: #CC6666; }
 
 .field-info, .poke-import {
   text-align: center;
@@ -2229,7 +2231,7 @@ th {
 /* header */
 .move-result-subgroup {
   float: left;
-  width: 33%; }
+  width: 35%; }
   .move-result-subgroup img {
     width: 96%;
     padding: 2%;
@@ -2278,6 +2280,9 @@ th {
   .move-result-subgroup .move-selected label {
     font-weight: bold; }
 
+.mid-sub-group {
+  width: 30%; }
+
 #gui-logo {
   width: 80%;
   padding: 10%; }
@@ -2294,7 +2299,7 @@ th {
   position: fixed;
   background-color: white;
   width: 60%;
-  height: 15%;
+  height: 18%;
   top: 10%;
   left: 50%;
   margin-left: -30%;
@@ -2339,15 +2344,27 @@ th {
     padding-right: 5%; }
   .info-group .select2-container {
     width: 65%; }
+    .info-group .select2-container .select2-choice {
+      border-radius: 0;
+      background-image: none;
+      position: relative;
+      height: auto; }
+    .info-group .select2-container .select2-arrow {
+      background-image: none;
+      background-color: #F2F2F2; }
+    .info-group .select2-container .select2-chosen {
+      min-height: 1.75rem;
+      font-size: 0.75rem; }
   .info-group .lvlInput {
     width: 30%;
     padding: 0 2%; }
     .info-group .lvlInput input {
+      text-align: center;
       width: 44px; }
   .info-group .drop-down {
     width: 32%;
-    padding-top: 3%;
-    padding-right: 2%; }
+    padding-top: 0.5rem;
+    padding-right: 0.8rem; }
     .info-group .drop-down select {
       max-width: 55%; }
   .info-group .forme-div {
@@ -2366,20 +2383,31 @@ th {
     width: 15%; }
     .pokemon-stat td input, .pokemon-stat th input {
       font-size: 0.875rem;
-      padding: 0.5rem 0;
+      padding: 0.3rem 0;
       width: 60%;
       left: 20%;
       text-align: center; }
     .pokemon-stat td .evs, .pokemon-stat th .evs {
-      width: 80%;
-      left: 10%; }
+      width: 70%;
+      left: 15%; }
 
 .pokemon-moves {
   float: left;
-  width: 100%; }
-  .pokemon-moves input, .pokemon-moves select {
-    height: 1.75em; }
+  width: 100%;
+  padding: 0.25rem 0; }
+  .pokemon-moves input, .pokemon-moves select, .pokemon-moves label {
+    min-height: 1.75rem;
+    margin-left: 2%; }
+  .pokemon-moves label {
+    background-color: #F2F2F2;
+    padding: 0.3rem 0;
+    width: 8%;
+    text-align: center; }
+  .pokemon-moves input {
+    padding: 0.3rem 0.5rem;
+    width: 10%; }
   .pokemon-moves .select2-container {
+    vertical-align: top;
     width: 20%; }
 
 .set-selector {
@@ -2387,13 +2415,10 @@ th {
   vertical-align: baseline; }
 
 .info-selectors select {
-  width: 8em; }
+  width: 8rem; }
 
 select.toxic-counter {
-  width: 4.5em; }
-
-.poke-info input.move-bp {
-  width: 2em; }
+  width: 4.5rem; }
 
 /* .move-type {
     width: 5.5em;

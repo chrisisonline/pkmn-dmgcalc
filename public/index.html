@@ -87,7 +87,7 @@
         </div>
 
         
-        <div class="move-result-subgroup" >
+        <div class="move-result-subgroup mid-sub-group" >
             <img id="gui-logo" src="gui-logo.png">
             <div class="simple-results">
                 <div class="simple-text" id="simpleMain"></div>
@@ -132,7 +132,7 @@
         </div>
     </div>
     
-    <div aria-label="Pok&eacute;mon 1" class="panel" role="region">
+    <div aria-label="Edit Pok&eacute;mon 1" class="panel pkm-1" role="region">
         <fieldset class="poke-info" id="p1">
             <legend align="center">Pok&eacute;mon 1</legend>
             
@@ -773,30 +773,101 @@
             </fieldset>
         </div>
     </div>
-    <div aria-label="Pok&eacute;mon 2" role="region" class="panel">
+
+    <div aria-label="Edit Pok&eacute;mon 2" class="panel pkm-2" role="region">
         <fieldset class="poke-info" id="p2">
             <legend align="center">Pok&eacute;mon 2</legend>
-            <input type="text" class="set-selector calc-trigger" />
             <div class="info-group">
-                <div>
+                <!-- I HID THIS -->
+                <div hidden>
                     <label>Type</label>
                     <select aria-label="Type 1" class="type1 terrain-trigger calc-trigger"></select>
                     <select aria-label="Type 2" class="type2 terrain-trigger calc-trigger"></select>
                 </div>
-                <div class="hide">
-                    <label>Forme</label>
-                    <select class="forme calc-trigger"></select>
-                </div>
-                <div>
-                    <label for="levelR1">Level</label>
-                    <input class="level calc-trigger" id="levelR1" value="100" />
-                </div>
-                <div class="hide">
+                <div hidden class="hide">
                     <label for="weightR1">Weight (kg)</label>
                     <input class="weight calc-trigger" id="weightR1" value="10.0" />
                 </div>
+                <div hidden>
+                    <label for="statusR1">Status</label>
+                    <select class="status calc-trigger" id="statusR1">
+                        <option value="Healthy">Healthy</option>
+                        <option value="Poisoned">Poisoned</option>
+                        <option value="Badly Poisoned">Badly Poisoned</option>
+                        <option value="Burned">Burned</option>
+                        <option value="Paralyzed">Paralyzed</option>
+                        <option value="Asleep">Asleep</option>
+                        <option value="Frozen">Frozen</option>
+                    </select>
+                    <select aria-label="Toxic counter" class="toxic-counter calc-trigger hide">
+                        <option value="1">1/16</option>
+                        <option value="2">2/16</option>
+                        <option value="3">3/16</option>
+                        <option value="4">4/16</option>
+                        <option value="5">5/16</option>
+                        <option value="6">6/16</option>
+                        <option value="7">7/16</option>
+                        <option value="8">8/16</option>
+                        <option value="9">9/16</option>
+                        <option value="10">10/16</option>
+                        <option value="11">11/16</option>
+                        <option value="12">12/16</option>
+                        <option value="13">13/16</option>
+                        <option value="14">14/16</option>
+                        <option value="15">15/16</option>
+                    </select>
+                </div>
+
+                <input type="text" class="set-selector calc-trigger" />
+                <div class="lvlInput">
+                    <label for="levelR1">Level</label>
+                    <input class="level calc-trigger" id="levelR1" value="100" />
+                </div>
+                <div class="gen-specific g3 g4 g5 g6 g7 drop-down">
+                    <label for="natureR1">Nature</label>
+                    <select class="nature calc-trigger" id="natureR1">
+                        <option value="Adamant">Adamant</option>
+                        <option value="Bashful">Bashful</option>
+                        <option value="Bold">Bold</option>
+                        <option value="Brave">Brave</option>
+                        <option value="Calm">Calm</option>
+                        <option value="Careful">Careful</option>
+                        <option value="Docile">Docile</option>
+                        <option value="Gentle">Gentle</option>
+                        <option value="Hardy" selected="selected">Hardy</option>
+                        <option value="Hasty">Hasty</option>
+                        <option value="Impish">Impish</option>
+                        <option value="Jolly">Jolly</option>
+                        <option value="Lax">Lax</option>
+                        <option value="Lonely">Lonely</option>
+                        <option value="Mild">Mild</option>
+                        <option value="Modest">Modest</option>
+                        <option value="Naive">Naive</option>
+                        <option value="Naughty">Naughty</option>
+                        <option value="Quiet">Quiet</option>
+                        <option value="Quirky">Quirky</option>
+                        <option value="Rash">Rash</option>
+                        <option value="Relaxed">Relaxed</option>
+                        <option value="Sassy">Sassy</option>
+                        <option value="Serious">Serious</option>
+                        <option value="Timid">Timid</option>
+                    </select>
+                </div>
+                <div class="gen-specific g3 g4 g5 g6 g7 drop-down">
+                    <label for="abilityR1">Ability</label>
+                    <select class="ability terrain-trigger calc-trigger" id="abilityR1"></select>
+                </div>
+                <div class="gen-specific g2 g3 g4 g5 g6 g7 drop-down">
+                    <label for="itemR1">Item</label>
+                    <select class="item terrain-trigger calc-trigger" id="itemR1"></select>
+                </div>
+                
+                <div class="hide drop-down forme-div">
+                    <label>Forme</label>
+                    <select class="forme calc-trigger"></select>
+                </div>
             </div>
-            <div class="info-group">
+            <div class="info-group pokemon-stat">
                 <table>
                     <thead>
                         <tr>
@@ -1043,155 +1114,91 @@
                     </tbody>
                 </table>
             </div>
-            <div class="info-group info-selectors">
-                <div class="gen-specific g3 g4 g5 g6 g7">
-                    <label for="natureR1">Nature</label>
-                    <select class="nature calc-trigger" id="natureR1">
-                        <option value="Adamant">Adamant</option>
-                        <option value="Bashful">Bashful</option>
-                        <option value="Bold">Bold</option>
-                        <option value="Brave">Brave</option>
-                        <option value="Calm">Calm</option>
-                        <option value="Careful">Careful</option>
-                        <option value="Docile">Docile</option>
-                        <option value="Gentle">Gentle</option>
-                        <option value="Hardy" selected="selected">Hardy</option>
-                        <option value="Hasty">Hasty</option>
-                        <option value="Impish">Impish</option>
-                        <option value="Jolly">Jolly</option>
-                        <option value="Lax">Lax</option>
-                        <option value="Lonely">Lonely</option>
-                        <option value="Mild">Mild</option>
-                        <option value="Modest">Modest</option>
-                        <option value="Naive">Naive</option>
-                        <option value="Naughty">Naughty</option>
-                        <option value="Quiet">Quiet</option>
-                        <option value="Quirky">Quirky</option>
-                        <option value="Rash">Rash</option>
-                        <option value="Relaxed">Relaxed</option>
-                        <option value="Sassy">Sassy</option>
-                        <option value="Serious">Serious</option>
-                        <option value="Timid">Timid</option>
-                    </select>
-                </div>
-                <div class="gen-specific g3 g4 g5 g6 g7">
-                    <label for="abilityR1">Ability</label>
-                    <select class="ability terrain-trigger calc-trigger" id="abilityR1"></select>
-                </div>
-                <div class="gen-specific g2 g3 g4 g5 g6 g7">
-                    <label for="itemR1">Item</label>
-                    <select class="item terrain-trigger calc-trigger" id="itemR1"></select>
-                </div>
-                <div>
-                    <label for="statusR1">Status</label>
-                    <select class="status calc-trigger" id="statusR1">
-                        <option value="Healthy">Healthy</option>
-                        <option value="Poisoned">Poisoned</option>
-                        <option value="Badly Poisoned">Badly Poisoned</option>
-                        <option value="Burned">Burned</option>
-                        <option value="Paralyzed">Paralyzed</option>
-                        <option value="Asleep">Asleep</option>
-                        <option value="Frozen">Frozen</option>
-                    </select>
-                    <select aria-label="Toxic counter" class="toxic-counter calc-trigger hide">
-                        <option value="1">1/16</option>
-                        <option value="2">2/16</option>
-                        <option value="3">3/16</option>
-                        <option value="4">4/16</option>
-                        <option value="5">5/16</option>
-                        <option value="6">6/16</option>
-                        <option value="7">7/16</option>
-                        <option value="8">8/16</option>
-                        <option value="9">9/16</option>
-                        <option value="10">10/16</option>
-                        <option value="11">11/16</option>
-                        <option value="12">12/16</option>
-                        <option value="13">13/16</option>
-                        <option value="14">14/16</option>
-                        <option value="15">15/16</option>
-                    </select>
-                </div>
-            </div>
-            <div class="info-group">
+
+            <!-- I HID THIS -->
+            <div hidden class="info-group">
                 <label for="currentHpR1">Current HP</label>
                 <input class="current-hp calc-trigger" id="currentHpR1" value="341" />/<span class="max-hp">341</span> (
                 <input class="percent-hp calc-trigger" value="100" />%)
             </div>
-            <div class="move1">
-                <select class="move-selector calc-trigger small-select"></select>
-                <input class="move-bp calc-trigger" value="50" />
-                <select class="move-type calc-trigger"></select>
-                <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
-                    <option value="Physical">Physical</option>
-                    <option value="Special">Special</option>
-                </select>
-                <input aria-describedby="criticalHitInstruction" class="move-crit calc-trigger visually-hidden" type="checkbox" id="critR1" />
-                <label class="btn crit-btn" for="critR1" title="Force this attack to be a critical hit?">Crit</label>
-                <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zR1"/>
-                <label class="btn z-btn gen-specific g7" for="zR1" title="Make this attack a Z-move?">Z</label>
-                <select class="move-hits calc-trigger hide">
-                    <option value="2">2 hits</option>
-                    <option value="3">3 hits</option>
-                    <option value="4">4 hits</option>
-                    <option value="5">5 hits</option>
-                </select>
-            </div>
-            <div class="move2">
-                <select class="move-selector calc-trigger small-select"></select>
-                <input class="move-bp calc-trigger" value="0" />
-                <select class="move-type calc-trigger"></select>
-                <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
-                    <option value="Physical">Physical</option>
-                    <option value="Special">Special</option>
-                </select>
-                <input aria-describedby="criticalHitInstruction" class="move-crit calc-trigger visually-hidden" type="checkbox" id="critR2" />
-                <label class="btn crit-btn" for="critR2" title="Force this attack to be a critical hit?">Crit</label>
-                <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zR2"/>
-                <label class="btn z-btn gen-specific g7" for="zR2" title="Make this attack a Z-move?">Z</label>
-                <select class="move-hits calc-trigger hide">
-                    <option value="2">2 hits</option>
-                    <option value="3">3 hits</option>
-                    <option value="4">4 hits</option>
-                    <option value="5">5 hits</option>
-                </select>
-            </div>
-            <div class="move3">
-                <select class="move-selector calc-trigger small-select"></select>
-                <input class="move-bp calc-trigger" value="0" />
-                <select class="move-type calc-trigger"></select>
-                <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
-                    <option value="Physical">Physical</option>
-                    <option value="Special">Special</option>
-                </select>
-                <input aria-describedby="criticalHitInstruction" class="move-crit calc-trigger visually-hidden" type="checkbox" id="critR3" />
-                <label class="btn crit-btn" for="critR3" title="Force this attack to be a critical hit?">Crit</label>
-                <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zR3"/>
-                <label class="btn z-btn gen-specific g7" for="zR3" title="Make this attack a Z-move?">Z</label>
-                <select class="move-hits calc-trigger hide">
-                    <option value="2">2 hits</option>
-                    <option value="3">3 hits</option>
-                    <option value="4">4 hits</option>
-                    <option value="5">5 hits</option>
-                </select>
-            </div>
-            <div class="move4">
-                <select class="move-selector calc-trigger small-select"></select>
-                <input class="move-bp calc-trigger" value="0" />
-                <select class="move-type calc-trigger"></select>
-                <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
-                    <option value="Physical">Physical</option>
-                    <option value="Special">Special</option>
-                </select>
-                <input aria-describedby="criticalHitInstruction" class="move-crit calc-trigger visually-hidden" type="checkbox" id="critR4" />
-                <label class="btn crit-btn" for="critR4" title="Force this attack to be a critical hit?">Crit</label>
-                <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zR4"/>
-                <label class="btn z-btn gen-specific g7" for="zR4" title="Make this attack a Z-move?">Z</label>
-                <select class="move-hits calc-trigger hide">
-                    <option value="2">2 hits</option>
-                    <option value="3">3 hits</option>
-                    <option value="4">4 hits</option>
-                    <option value="5">5 hits</option>
-                </select>
+
+            <div class="info-group">
+                <div class="move1 pokemon-moves">
+                    <select class="move-selector calc-trigger small-select"></select>
+                    <input class="move-bp calc-trigger" value="50" />
+                    <select class="move-type calc-trigger"></select>
+                    <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
+                        <option value="Physical">Physical</option>
+                        <option value="Special">Special</option>
+                    </select>
+                    <input aria-describedby="criticalHitInstruction" class="move-crit calc-trigger visually-hidden" type="checkbox" id="critR1" />
+                    <label class="btn crit-btn" for="critR1" title="Force this attack to be a critical hit?">Crit</label>
+                    <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zR1"/>
+                    <label class="btn z-btn gen-specific g7" for="zR1" title="Make this attack a Z-move?">Z</label>
+                    <select class="move-hits calc-trigger hide">
+                        <option value="2">2 hits</option>
+                        <option value="3">3 hits</option>
+                        <option value="4">4 hits</option>
+                        <option value="5">5 hits</option>
+                    </select>
+                </div>
+                <div class="move2 pokemon-moves">
+                    <select class="move-selector calc-trigger small-select"></select>
+                    <input class="move-bp calc-trigger" value="0" />
+                    <select class="move-type calc-trigger"></select>
+                    <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
+                        <option value="Physical">Physical</option>
+                        <option value="Special">Special</option>
+                    </select>
+                    <input aria-describedby="criticalHitInstruction" class="move-crit calc-trigger visually-hidden" type="checkbox" id="critR2" />
+                    <label class="btn crit-btn" for="critR2" title="Force this attack to be a critical hit?">Crit</label>
+                    <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zR2"/>
+                    <label class="btn z-btn gen-specific g7" for="zR2" title="Make this attack a Z-move?">Z</label>
+                    <select class="move-hits calc-trigger hide">
+                        <option value="2">2 hits</option>
+                        <option value="3">3 hits</option>
+                        <option value="4">4 hits</option>
+                        <option value="5">5 hits</option>
+                    </select>
+                </div>
+                <div class="move3 pokemon-moves">
+                    <select class="move-selector calc-trigger small-select"></select>
+                    <input class="move-bp calc-trigger" value="0" />
+                    <select class="move-type calc-trigger"></select>
+                    <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
+                        <option value="Physical">Physical</option>
+                        <option value="Special">Special</option>
+                    </select>
+                    <input aria-describedby="criticalHitInstruction" class="move-crit calc-trigger visually-hidden" type="checkbox" id="critR3" />
+                    <label class="btn crit-btn" for="critR3" title="Force this attack to be a critical hit?">Crit</label>
+                    <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zR3"/>
+                    <label class="btn z-btn gen-specific g7" for="zR3" title="Make this attack a Z-move?">Z</label>
+                    <select class="move-hits calc-trigger hide">
+                        <option value="2">2 hits</option>
+                        <option value="3">3 hits</option>
+                        <option value="4">4 hits</option>
+                        <option value="5">5 hits</option>
+                    </select>
+                </div>
+                <div class="move4 pokemon-moves">
+                    <select class="move-selector calc-trigger small-select"></select>
+                    <input class="move-bp calc-trigger" value="0" />
+                    <select class="move-type calc-trigger"></select>
+                    <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
+                        <option value="Physical">Physical</option>
+                        <option value="Special">Special</option>
+                    </select>
+                    <input aria-describedby="criticalHitInstruction" class="move-crit calc-trigger visually-hidden" type="checkbox" id="critR4" />
+                    <label class="btn crit-btn" for="critR4" title="Force this attack to be a critical hit?">Crit</label>
+                    <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zR4"/>
+                    <label class="btn z-btn gen-specific g7" for="zR4" title="Make this attack a Z-move?">Z</label>
+                    <select class="move-hits calc-trigger hide">
+                        <option value="2">2 hits</option>
+                        <option value="3">3 hits</option>
+                        <option value="4">4 hits</option>
+                        <option value="5">5 hits</option>
+                    </select>
+                </div>
             </div>
         </fieldset>
     </div>
