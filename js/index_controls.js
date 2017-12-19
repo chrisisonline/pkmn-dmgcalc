@@ -196,9 +196,7 @@ $(".result-move").click(function () {
 });
 
 // Create a shortened form of the main text
-$(".main-result-group").change(function () {
-	// body...
-})
+
 
 // Making the main results a popup window
 $("#show-btn").click(function(){
@@ -206,6 +204,22 @@ $("#show-btn").click(function(){
 });
 $("#close-btn").click(function(){
 	$("#show-details").toggle();
+});
+
+// Field popup buttons
+$("#field-open-btn").click(function(){
+	$("#field-popup").toggle();
+});
+$("#field-close-btn").click(function(){
+	$("#field-popup").toggle();
+});
+
+// Import popup buttons
+$("#import-open-btn").click(function(){
+	$("#import-popup").toggle();
+});
+$("#import-close-btn").click(function(){
+	$("#import-popup").toggle();
 });
 
 // Selecting inputs highlights text
