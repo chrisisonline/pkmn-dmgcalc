@@ -12,3 +12,14 @@ $blue: #5AB1D6;
 $light-blue: #D3E4EA;
 $red: #CC6666;
 $light-red: #DDB1B1;
+
+// Sizes
+@function Rem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+$boxHeight: Rem(28px);
+$fontSize-xs: Rem(12px);
+$fontSize-s: Rem(14px);
+$fontSize: Rem(16px);
+$fontSize-l: Rem(18px);

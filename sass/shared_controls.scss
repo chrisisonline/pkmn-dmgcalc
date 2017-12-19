@@ -8,18 +8,22 @@
 }
 /* select2 overrides */
 .select2-container {
-    height: 28px;
-    vertical-align: baseline;
+    height: 1.75em;
 
+    .select2-choice {
+        font-size: $fontSize-xs;
+        height: $boxHeight;
+    }
 }
 .select2-container .select2-choice > .select2-chosen {
     width: 100%;
 }
-/* .small-select.select2-container .select2-choice {
-    font-size: 0.9em;
-    height: 18px;
-    line-height: 18px;
+.select2-drop{
+    .select2-results, .select2-search {
+        font-size: $fontSize-xs;
+    }  
 }
+/* 
 .small-select.select2-container .select2-choice .select2-arrow b {
     background-position: 0 -4px;
 }
@@ -59,7 +63,7 @@ th, td {
     padding: 0;
 }
 th {
-    font-size: 0.8em;
+    font-size: $fontSize-s;
 }
 .title-text {
     font-weight: bold;
@@ -68,18 +72,18 @@ th {
 }
 .big-text {
     font-weight: bold;
-    font-size: 16px;
+    font-size: $fontSize;
     margin: 0.5em 0;
 }
 .small-text {
-    font-size: 12px;
+    font-size: $fontSize-s;
 }
 .panel {
-    width: 50%;
+    width: 49%;
     float: left;
 }
 .poke-info {
-    width: 99%;
+    width: 100%;
     margin: 0;
     position: relative;
 }
@@ -205,11 +209,11 @@ th {
             width: 100%;
             height: 100%;
             padding-top: 5%;
-            font-size: 16px;
+            font-size: $fontSize-l;
         }
         span{
             z-index: -1;
-            font-size: 14px;
+            font-size: $fontSize-s;
             font-style: italic;
             margin-top: 15%;
         }
@@ -272,11 +276,11 @@ th {
     margin: 0 auto;
     width: 85%;
     text-align: center;
-    font-size: 18px;
+    font-size: $fontSize-l;
 }
 
 .result-move-header {
-    font-size: 0.8em;
+    font-size: $fontSize;
     font-weight: bold;
     margin: 0 0 5px;
 }
@@ -297,25 +301,38 @@ th {
     position: relative;
 
     label, input, select {
-        height: 28px;
+        min-height: $boxHeight;
+        padding: 0.3rem 0;
     }
     label {
-        padding: 0 5%;
+        padding-right: 5%;
     }
     .select2-container {
-        width: 70%;
+        width: 65%;
     }
     .lvlInput {
-        width: 25%;
+        width: 30%;
         padding: 0 2%;
         input {
             width: 44px;
         }
     }
     .drop-down {
-        width: 44%;
-        padding-top: 1%;
+        width: 32%;
+        padding-top: 3%;
         padding-right: 2%;
+
+        select {
+            max-width: 55%;
+        } 
+    }
+    .forme-div {
+        width: 100%;
+        padding-top: 1%;
+
+        .forme {
+            max-width: 100%;
+        }
     }
 
 }
@@ -327,23 +344,29 @@ th {
         float: left;
     }
     td, th {
-        padding: auto;
-        height: 28px;
+        padding: 0.5% 0;
         width: 15%;
+
+        input {
+            font-size: $fontSize-s;
+            padding: 0.5rem 0;
+            width: 60%;
+            left: 20%;
+            text-align: center;
+        }
+        .evs {
+            width: 80%;
+            left: 10%;
+        }
     }
-    input {
-        width: 80%;
-        left: 10%;
-        text-align: center;
-    }
+    
 }
 .pokemon-moves {
     float: left;
     width: 100%;
 
     input, select {
-        height: 28px;
-        // margin: 1%;
+        height: 1.75em;
     }
     .select2-container {
         width: 20%;
@@ -352,6 +375,7 @@ th {
 }
 .set-selector {
     width: 100%;
+    vertical-align: baseline;
 }
 .info-selectors select {
     width: 8em;
@@ -386,7 +410,7 @@ select.toxic-counter {
 
 /* field info */
 .field-info .btn {
-    font-size: 0.8em;
+    font-size: $fontSize-s;
 }
 
 [hidden], .hide {
