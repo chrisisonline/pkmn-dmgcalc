@@ -1044,6 +1044,16 @@ function calculate() {
 $(".result-move").change(function () {
 	if (damageResults) {
 		var result = findDamageResult($(this));
+		// CJ EDITS: Updates hp bars when you switch moves
+		var p1 = new Pokemon($("#p1"));
+		var p2 = new Pokemon($("#p2"));
+		var Pkm = 0;
+		if ($(this).parent(".btn-move").hasClass("lmoves")){
+			Pkm = 1;
+		} else {
+			Pkm = 2;
+		}
+		// alert($(this).parent(".btn-move").hasClass("lmoves"));
 		if (result) {
 			$("#mainResult").text(result.description + ": " + result.damageText + " -- " + result.koChanceText);
 			$("#damageValues").text("Possible damage amounts: (" + result.damage.join(", ") + ")");
@@ -1051,9 +1061,40 @@ $(".result-move").change(function () {
 			// Adds simplified text to the main display
 			$("#simpleMain").text("Damage: " + result.damageText);
 			$("#simpleKO").text("KO Chance: " + result.koChanceText);
+
+			if (Pkm == 1) {
+				updateBar(Math.floor(100 - result.damage[7]*100/p1.maxHP),Pkm);
+			} else {
+				updateBar(Math.floor(100 - result.damage[7]*100/p2.maxHP),Pkm);
+			}
 		}
 	}
 });
+
+function updateBar(hp, pkm){
+	$("#myBar1").css("width" , 100 + '%'); 
+	$("#myBar1").text(100  + '%');
+	$("#myBar1").removeClass('ko-d');
+	$("#myBar2").css("width" , 100 + '%'); 
+	$("#myBar2").text(100  + '%');
+	$("#myBar2").removeClass('ko-d');
+
+	if (pkm == 2 && hp <= 0) {
+		$("#myBar1").css("width" , 100 + '%');
+		$("#myBar1").text("KO'd!");
+		$("#myBar1").addClass('ko-d');
+	} else if (pkm == 1 && hp <= 0) {
+		$("#myBar2").css("width" , 100 + '%');
+		$("#myBar2").text("KO'd!");
+		$("#myBar2").addClass('ko-d');
+	} else if (pkm == 2) {
+		$("#myBar1").css("width" , hp + '%'); 
+		$("#myBar1").text(hp  + '%');
+	} else {
+		$("#myBar2").css("width" , hp + '%'); 
+		$("#myBar2").text(hp  + '%');
+	}
+}
 
 function findDamageResult(resultMoveObj) {
 	var selector = "#" + resultMoveObj.attr("id");
@@ -1139,14 +1180,13 @@ $("#import-close-btn").click(function(){
 });
 
 // Selecting inputs highlights text
-$(function () {
-    var focusedElement;
-    $(document).on('focus', 'input', function () {
-        if (focusedElement == this) return; //already focused, return so user can now place cursor at specific point in input.
-        focusedElement = this;
-        setTimeout(function () { focusedElement.select(); }, 50); //select all text in any field on focus for easy re-entry. Delay sightly to allow focus to "stick" before selecting.
-    });
+var focusedElement;
+$(document).on('focus', 'input', function () {
+    if (focusedElement == this) return; //already focused, return so user can now place cursor at specific point in input.
+    focusedElement = this;
+    setTimeout(function () { focusedElement.select(); }, 50); //select all text in any field on focus for easy re-entry. Delay sightly to allow focus to "stick" before selecting.
 });
+
 
 function CALCULATE_ALL_MOVES_BW(p1, p2, field) {
 	checkAirLock(p1, field);
