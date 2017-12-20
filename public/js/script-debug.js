@@ -1063,9 +1063,9 @@ $(".result-move").change(function () {
 			$("#simpleKO").text("KO Chance: " + result.koChanceText);
 
 			if (Pkm == 1) {
-				updateBar(Math.floor(100 - result.damage[7]*100/p1.maxHP),Pkm);
-			} else {
 				updateBar(Math.floor(100 - result.damage[7]*100/p2.maxHP),Pkm);
+			} else {
+				updateBar(Math.floor(100 - result.damage[7]*100/p1.maxHP),Pkm);
 			}
 		}
 	}
