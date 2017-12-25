@@ -1,352 +1,284 @@
 /* general page styling */
-* {
-    color: $grey-1;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
-}
-/* select2 overrides */
-.select2-container .select2-choice > .select2-chosen {
-    width: 100%;
-}
-.select2-drop {
-    .select2-results, .select2-search {
-        font-size: $fontSize-xs;
-    }
-    .select2-results .select2-highlighted{
-        background: $grey-4; 
-    }
-}
 
-        
-/* 
-.small-select.select2-container .select2-choice .select2-arrow b {
-    background-position: 0 -4px;
+* {
+  color: $grey-1;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
 }
-.small-select.select2-dropdown-open .select2-choice .select2-arrow b {
-    background-position: -18px -4px;
-} */
 
 html, body {
-    font: 10pt Verdana, sans-serif;
-    background-color: white;
-    color: black;
-    margin: 0;
-    padding: 0;
+  font: 10pt Verdana, sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0;
 }
+
 div {
-    display: inline-block;
-    overflow: hidden;
+  display: inline-block;
+  overflow: hidden;
 }
+
 .wrapper {
-    padding: 0 1em;
-    //max-width: 1247px;
-    width: 60%;
-    margin: 0 20%;
+  padding: 0 1em;
+  width: 70%;
+  margin: 0 15%;
 }
+
 div.wrapper > div > span {
-    padding-right: 5px;
+  padding-right: 5px;
 }
+
 fieldset {
-    float: left;
-    border: 1px solid #AAAAAA;
+  float: left;
+  border: 1px solid #AAAAAA;
 }
+
 legend {
-    font-weight: bold;
-    text-align: center;
+  font-weight: bold;
+  text-align: center;
 }
+
 th, td {
-    padding: 0;
+  padding: 0;
 }
+
 th {
-    font-size: $fontSize-s;
+  font-size: 0.875rem;
 }
+
 .title-text {
-    font-weight: bold;
-    font-size: 1.5em;
-    margin: 0.5em 1em 0.5em 0;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 0.5em 1em 0.5em 0;
 }
+
 .big-text {
-    font-weight: bold;
-    font-size: $fontSize;
-    margin: 0.5em 0;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.5em 0;
 }
+
 .small-text {
-    font-size: $fontSize-s;
+  font-size: 0.875rem;
 }
+
 .panel {
-    width: 48%;
-    float: left;
+  width: 48%;
+  float: left;
 }
+
 .pkm-1 {
-    margin-right: 2%;
+  margin-right: 2%;
 }
+
 .pkm-2 {
-    margin-left: 1.5%;
+  margin-left: 1.5%;
 }
+
 .poke-info {
-    width: 100%;
-    margin: 0;
-    float: left;
-    position: relative;
+  width: 100%;
+  margin: 0;
+  float: left;
+  position: relative;
 }
+
 #p1 {
-    border-color: $blue;
+  border-color: #5AB1D6;
 }
+
 #p2 {
-    border-color: $red;
+  border-color: #CC6666;
 }
+
 .holder-0 {
-    position: absolute;
-    top: 151px;
+  position: absolute;
+  top: 151px;
 }
+
 #holder-2 tr {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
-/* general button styling */
-.btn {
-    text-align: center;
-    border: solid 1px $grey-1;
-    padding: 0.3rem;
-    cursor: pointer;
-    color: $grey-1;
-    background: white;
-    margin: 0.1rem 0;
-    display: inline-block;
-    width: 5em;
-}
-.btn-wide {
-    width: 7em;
-}
-.btn-xwide {
-    width: 8em;
-}
-.btn-xxwide {
-    width: 9em;
-}
-.btn-xxxwide {
-    width: 10em;
-}
-.btn-small {
-    width: 4em;
-}
-.btn-xsmall {
-    width: 2em;
-}
-.btn-left {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-.btn-right {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-.btn-top {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-.btn-bottom {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-.btn-mid {
-    border-radius: 0;
-}
-.btn-group {
-    display: inline-block;
-    width: 100%;
-}
 button {
-    background: none;
-    border: 1px solid $grey-1;
-    padding: 1rem 2rem;
-
-    &:hover {
-        background-color: $grey-4;
-        @include transition(all 0.15s ease-in);
-    }
-}
-.left {
-    float: left;
-}
-.right {
-    float: right;
-}
-.locked-move:checked + .btn {
-    background: #ffff99;
+  background: none;
+  border: 1px solid $grey-1;
+  padding: 1rem 2rem;
+  &:hover {
+    background-color: #F2F2F2;
+    @include transition(all 0.15s ease-in);
+  }
 }
 
 /* header */
-// GUI hp bar
+
 .gui {
-    width: 100%;
-    padding-bottom: 1rem;
-
-    img {
-        width: 30%;
-    }
-    .pkm-img1{
-        float: left;
-    }
-    .pkm-img2{
-        float: right;
-    }
-    .hp-wrap {
-        float: left;
-        width: 60%;
-        margin-left: 5%;
-        padding-top: 2rem;
-
-        #pkm1-name {
-            float: left;
-            margin-left: 0.2rem;
-        }
-        #pkm1-lvl {
-            float: right;
-            margin-right: 0.2rem;
-        }
-        #pkm2-name {
-            float: right;
-            margin-right: 0.2rem;
-        }
-        #pkm2-lvl {
-            float: left;
-            margin-left: 0.2rem;
-        }
-    }
-}
-.hp-bar {
-    width: 100%;
-    background-color: $grey-4;
-    border-radius: 1rem;
-    height: 1.75rem;
-    line-height: 1.75rem;
-
-        .myBar {
-          border-radius: 1rem;
-          width: 10%;
-          background-color: $light-green;
-          text-align: center;
-          color: white;
-        }
-        #myBar2 {
-            float: right;
-        }
-        .ko-d {
-            background-color: $grey-4;
-            color: $grey-1;
-        }
-}
-.move-result-subgroup {
-    float: left;
-    width: 35%;
-
-    .btn-move {
-        position: relative;
-        width: 48%;
-        margin: 0.5%;
-        padding: 2%;
-        border: 1px solid;
-        &:hover {
-            @include transition(all 0.15s ease-in);
-        }
-
-        label, span, input {
-            text-align: center;
-            display: block;
-        }
-        label {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            padding-top: 5%;
-            font-size: $fontSize-l;
-        }
-        span{
-            z-index: -1;
-            font-size: $fontSize-s;
-            font-style: italic;
-            margin-top: 15%;
-        }
-    }
-    .lmoves {
-        border-color: $blue;
-        &:hover {
-            background-color: $light-blue;
-        }
-    }
-    .rmoves {
-        border-color: $red;
-        &:hover {
-            background-color: $light-red;
-        }
-    }
-    .move-selected {
-        &.lmoves {
-            background-color: $light-blue;
-        }
-        &.rmoves {
-            background-color: $light-red;
-        }
-        label {
-            font-weight: bold;
-        }
-    }
-
-}
-#show-btn, #close-btn{
-    padding: 0.5rem 1rem;
-    margin-top: 1rem;
-}
-.mid-sub-group {
+  width: 100%;
+  padding-bottom: 1rem;
+  img {
     width: 30%;
-}
-#gui-logo {
-    width: 80%;
-    margin: 2rem 10%;
-}
-.move-result-group .btn {
-    margin-right: 1em;
-}
-.main-result-group {
-    margin: 2em 0 1em;
-}
-#show-details {
-    display: none;
-    z-index: 2;
-    position: fixed;
-    background-color: white;
+  }
+  .pkm-img1 {
+    float: left;
+  }
+  .pkm-img2 {
+    float: right;
+  }
+  .hp-wrap {
+    float: left;
     width: 60%;
-    height: 18%;
-    top: 10%;
-    left: 50%;
-    margin-left: -30%; /* Negative half of width. */
-    text-align: center;
-    padding: 1.5% 5%;
-    border: 1px solid $grey-1;
-
-    @include box-shadow(3px, 3px, 2px, $grey-1);
-
-    button {
-        display: block;
-        margin: 1% auto;
+    margin-left: 5%;
+    padding-top: 2rem;
+    #pkm1-name {
+      float: left;
+      margin-left: 0.2rem;
     }
+    #pkm1-lvl, #pkm2-name {
+      float: right;
+      margin-right: 0.2rem;
+    }
+    #pkm2-lvl {
+      float: left;
+      margin-left: 0.2rem;
+    }
+  }
 }
-.simple-results {
-    margin: 0 7%;
-    width: 85%;
+
+.hp-bar {
+  width: 100%;
+  background-color: #F2F2F2;
+  border-radius: 1rem;
+  height: 1.75rem;
+  line-height: 1.75rem;
+  .myBar {
+    border-radius: 1rem;
+    width: 10%;
+    background-color: #95D66E;
     text-align: center;
-    font-size: $fontSize-l;
+    color: white;
+  }
+  #myBar2 {
+    float: right;
+  }
+  .ko-d {
+    background-color: #F2F2F2;
+    color: $grey-1;
+  }
+}
+
+.move-result-subgroup {
+  float: left;
+  width: 35%;
+  .btn-move {
+    position: relative;
+    width: 48%;
+    margin: 0.5%;
+    padding: 2%;
+    border: 1px solid;
+    &:hover {
+        @include transition(all 0.15s ease-in);
+    }
+    label, span, input {
+      text-align: center;
+      display: block;
+    }
+    label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding-top: 5%;
+      font-size: 1.125rem;
+    }
+    span {
+      z-index: -1;
+      font-size: 0.875rem;
+      font-style: italic;
+      margin-top: 15%;
+    }
+  }
+  .lmoves {
+    border-color: #5AB1D6;
+    &:hover {
+      background-color: #D3E4EA;
+    }
+  }
+  .rmoves {
+    border-color: #CC6666;
+    &:hover {
+      background-color: #DDB1B1;
+    }
+  }
+  .move-selected {
+    &.lmoves {
+      background-color: #D3E4EA;
+    }
+    &.rmoves {
+      background-color: #DDB1B1;
+    }
+    label {
+      font-weight: bold;
+    }
+  }
+}
+
+#show-btn, #close-btn {
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+
+.mid-sub-group {
+  width: 30%;
+}
+
+#gui-logo {
+  width: 80%;
+  margin: 1.5rem 10%;
+}
+
+.move-result-group .btn {
+  margin-right: 1em;
+}
+
+.main-result-group {
+  margin: 2em 0 1em;
+}
+
+#show-details {
+  display: none;
+  z-index: 2;
+  position: fixed;
+  background-color: white;
+  width: 60%;
+  height: 18%;
+  top: 10%;
+  left: 50%;
+  margin-left: -30%;
+  /* Negative half of width. */
+  text-align: center;
+  padding: 1.5% 5%;
+  border: 1px solid $grey-1;
+  @include box-shadow(3px,3px,2px,$grey-3);
+  button {
+    display: block;
+    margin: 1% auto;
+  }
+}
+
+.simple-results {
+  margin: 0 7%;
+  width: 85%;
+  text-align: center;
+  font-size: 1.125rem;
 }
 
 .result-move-header {
-    font-size: $fontSize;
-    font-weight: bold;
-    margin: 0 0 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 0 5px;
 }
 
 /* pokemon info */
@@ -359,123 +291,140 @@ button {
     display: inline-block;
     // width: 50px;
 } */
+
+/* select2 overrides */
+
+.select2-container .select2-choice > .select2-chosen {
+  width: 100%;
+}
+
+.select2-drop {
+  .select2-results, .select2-search {
+    font-size: 0.75rem;
+  }
+  .select2-results .select2-highlighted {
+    background: #F2F2F2;
+  }
+}
+
 .info-group {
-    float: left;
-    margin: 1%;
-    position: relative;
-
-    label, input, select {
-        min-height: $boxHeight;
-        padding: 0.3rem 0;
+  float: left;
+  margin: 1%;
+  position: relative;
+  label, input, select {
+    min-height: 1.75rem;
+    padding: 0.3rem 0;
+  }
+  label {
+    padding-right: 5%;
+  }
+  .select2-container {
+    width: 65%;
+    .select2-choice {
+      border-radius: 0;
+      background-image: none;
+      position: relative;
+      height: auto;
     }
-    label {
-        padding-right: 5%;
+    .select2-arrow {
+      background-image: none;
+      background-color: #F2F2F2;
     }
-    .select2-container {
-        width: 65%;
-
-        .select2-choice {
-            border-radius: 0;
-            background-image: none;
-            position: relative;
-            height: auto;
-        }
-        .select2-arrow {
-            background-image: none;
-            background-color: $grey-4;
-        }
-        .select2-chosen {
-            min-height: $boxHeight;
-            font-size: $fontSize-s;       
-        }
+    .select2-chosen {
+      min-height: 1.75rem;
+      font-size: 0.875rem;
     }
-    .lvlInput {
-        width: 30%;
-        padding: 0 2%;
-        input {
-            text-align: center;
-            width: 44px;
-        }
-    }
-    .drop-down {
-        width: 32%;
-        padding-top: 0.5rem;
-        padding-right: 0.8rem;
-
-        select {
-            max-width: 55%;
-        } 
-    }
-    .forme-div {
-        width: 100%;
-        padding-top: 1%;
-
-        .forme {
-            max-width: 100%;
-        }
-    }
-
-}
-.pokemon-stat {
-    padding-bottom: 2%;
-    text-align: center;
-
-    table {
-        float: left;
-    }
-    td, th {
-        padding: 0.5% 0;
-        width: 15%;
-
-        input {
-            font-size: $fontSize-s;
-            padding: 0.3rem 0;
-            width: 60%;
-            left: 20%;
-            text-align: center;
-        }
-        .evs {
-            width: 70%;
-            left: 15%;
-        }
-    }
-    
-}
-.pokemon-moves {
-    float: left;
-    width: 100%;
-    padding: 0.25rem 0;
-
-    input, select, label {
-        min-height: $boxHeight;
-        margin-left: 2%;
-    }
-    label {
-        background-color: $grey-4;
-        padding: 0.3rem 0;
-        width: 8%;
-        text-align: center;
-    }
+  }
+  .lvlInput {
+    width: 25%;
+    margin-left: 5%;
+    padding: 0 0.8rem;
     input {
-        padding: 0.3rem 0.5rem;
-        width: 10%;
+      text-align: center;
+      width: 44px;
     }
-    .select2-container {
-        vertical-align: top;
-        width: 20%;
+  }
+  .drop-down {
+    width: 49%;
+    margin: 0;
+    padding-top: 0.3rem;
+    padding-right: 0.8rem;
+    select {
+      max-width: 55%;
     }
-    
+  }
+  .forme-div {
+    .forme {
+      max-width: 100%;
+    }
+  }
 }
+
+.pokemon-stat {
+  padding-bottom: 2%;
+  text-align: center;
+  table {
+    float: left;
+  }
+  td, th {
+    padding: 0.5% 0;
+    width: 15%;
+  }
+  td input, th input {
+    font-size: 0.875rem;
+    padding: 0.3rem 0;
+    width: 60%;
+    left: 20%;
+    text-align: center;
+  }
+  td .evs, th .evs {
+    width: 70%;
+    left: 15%;
+  }
+  .total {
+    font-weight: bold;
+  }
+}
+
+.pokemon-moves {
+  float: left;
+  width: 100%;
+  padding: 0.25rem 0;
+  input, select {
+    min-height: 1.75rem;
+    margin-left: 2%;
+  }
+  label {
+    min-height: 1.75rem;
+    margin-left: 2%;
+    background-color: #F2F2F2;
+    padding: 0.3rem 0;
+    width: 8%;
+    text-align: center;
+  }
+  input {
+    padding: 0.15rem 0.5rem;
+    width: 10%;
+  }
+  .select2-container {
+    vertical-align: top;
+    width: 20%;
+  }
+}
+
 .set-selector {
-    width: 100%;
-    vertical-align: baseline;
+  width: 100%;
+  vertical-align: baseline;
 }
+
 .info-selectors select {
-    width: 8rem;
+  width: 8rem;
 }
+
 select.toxic-counter {
-    width: 4.5rem;
+  width: 4.5rem;
 }
+
 /* .move-type {
     width: 5.5em;
 }
@@ -497,131 +446,127 @@ select.toxic-counter {
     height: 1em;
     padding: 3px 3px;
 } */
-
 /* field info */
-#field-popup {
-    z-index: 3;
-    position: fixed;
-    background-color: white;
-    width: 40%;
-    height: 85%;
-    top: 5%;
-    left: 50%;
-    margin-left: -20%; /* Negative half of width. */
-    border: 1px solid $grey-1;
-    @include box-shadow(3px, 3px, 2px, $grey-1);
-    display: none;
 
-    div {
-        width: 100%;
-    }
-    table {
-        width: 100%;
-    }
-    .field-info{
-        float: left;
-        width: 80%;
-        margin: 5% 10% 3.5%;
-        font-size: $fontSize-s;
-    }
-    #field-close-btn {
-        float: left;
-        margin-left: 35%;
-        width: 30%;
-    }
+#field-popup {
+  z-index: 3;
+  position: fixed;
+  background-color: white;
+  width: 40%;
+  height: 85%;
+  top: 5%;
+  left: 50%;
+  margin-left: -20%;
+  /* Negative half of width. */
+  border: 1px solid $grey-1;
+  display: none;
+  @include box-shadow(3px,3px,2px,$grey-3);
+  div, table {
+    width: 100%;
+  }
+  .field-info {
+    float: left;
+    width: 80%;
+    margin: 5% 10% 3.5%;
+    font-size: 0.875rem;
+  }
+  #field-close-btn {
+    float: left;
+    margin-left: 35%;
+    width: 30%;
+  }
 }
 
 #import-popup {
-    z-index: 4;
-    position: fixed;
-    background-color: white;
-    width: 30%;
-    height: 45%;
-    top: 20%;
-    left: 50%;
-    margin-left: -15%; /* Negative half of width. */
-    border: 1px solid $grey-1;
-    @include box-shadow(3px, 3px, 2px, $grey-1);
-    display: none;
+  z-index: 4;
+  position: fixed;
+  background-color: white;
+  width: 30%;
+  height: 45%;
+  top: 20%;
+  left: 50%;
+  margin-left: -15%;
+  /* Negative half of width. */
+  border: 1px solid $grey-1;
+  display: none;
+  @include box-shadow(3px,3px,2px,$grey-3);
 
-    .poke-import {
-        border: none;
-        margin-top: 1em;
-        margin-left: 3rem;
-
-        button {
-            margin-top: 1rem;
-            border: 1px solid $grey-1;
-            border-radius: 0;
-            width: 25%;
-            margin-left: 37%;
-        }
+  .poke-import {
+    border: none;
+    margin-top: 1em;
+    margin-left: 3rem;
+    button {
+      margin-top: 1rem;
+      border: 1px solid $grey-1;
+      border-radius: 0;
+      width: 25%;
+      margin-left: 37%;
     }
-    #import-close-btn {
-        float: right;
-        margin-top: 1rem;
-        margin-right: 1rem;
-        padding: 0.5rem 0.8rem;
-    }
+  }
+  #import-close-btn {
+    float: right;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    padding: 0.3rem 0.8rem;
+  }
 }
 
-// Other Button Sections
 .other-btn-group {
-    margin-top: 2rem;
-
-    button {
-        margin-right: 2rem;
-    }
+  margin-top: 2rem;
+  button {
+    margin-right: 2rem;
+  }
 }
 
 [hidden], .hide {
-    display: none;
+  display: none;
 }
 
 /* Bootstrap */
+
 .panel-group > .panel {
-    clear: left;
+  clear: left;
 }
 
 /* ColVis */
+
 .clear {
   clear: right;
 }
 
 .import-team-text {
-    min-width: 27em;
-    min-height: 10em;
-    resize: vertical;
+  min-width: 27em;
+  min-height: 10em;
+  resize: vertical;
 }
-.visually-hidden:focus + .btn, /* Add visual indication when focusing on visually hidden elements */
-.btn:hover {
-    z-index: 10;
-    border-color: #777777;
-    background: #e3e3e3;
+
+.visually-hidden:focus + .btn, .btn:hover {
+  z-index: 10;
+  border-color: #777777;
+  background: #e3e3e3;
 }
-.visually-hidden:checked + .btn {
+
+.visually-hidden {
+  &:checked + .btn {
     font-weight: bold;
     color: #111111;
     background: #f5f5f5;
-}
-.visually-hidden[type="radio"]:checked + .btn {
+  }
+  &[type="radio"]:checked + .btn {
     cursor: default;
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  white-space: nowrap;
+  /* https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe */
+  &:disabled + .btn {
+    color: #999999;
+  }
 }
 
 /* Hide element visually, but not from screen readers. See http://adrianroselli.com/2017/05/under-engineered-custom-radio-buttons-and-checkboxen.html */
-.visually-hidden {
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    position: absolute;
-    top: auto;
-    white-space: nowrap; /* https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe */
-}
-
-.visually-hidden:disabled + .btn {
-    color: #999999;
-}
-
-
