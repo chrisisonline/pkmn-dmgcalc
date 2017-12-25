@@ -1837,10 +1837,10 @@ tbody.collapse.in {
 /* general button styling */
 .btn {
   text-align: center;
-  border: solid 1px #212121;
+  border: solid 1px #333333;
   padding: 0.3rem;
   cursor: pointer;
-  color: #212121;
+  color: #333333;
   background: white;
   margin: 0.1rem 0;
   display: inline-block;
@@ -2022,7 +2022,7 @@ a img {
 
 /* general page styling */
 * {
-  color: #212121;
+  color: #333333;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2105,7 +2105,7 @@ th {
 
 button {
   background: none;
-  border: 1px solid #212121;
+  border: 1px solid #333333;
   padding: 1rem 2rem; }
   button:hover {
     background-color: #F2F2F2;
@@ -2141,6 +2141,7 @@ button {
       margin-left: 0.2rem; }
 
 .hp-bar {
+  position: relative;
   width: 100%;
   background-color: #F2F2F2;
   border-radius: 1rem;
@@ -2148,15 +2149,33 @@ button {
   line-height: 1.75rem; }
   .hp-bar .myBar {
     border-radius: 1rem;
-    width: 10%;
-    background-color: #95D66E;
+    width: 100%;
+    background-color: #cfecbe;
     text-align: center;
     color: white; }
+  .hp-bar #myBar1 {
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .hp-bar #myBar1-max {
+    position: absolute;
+    background-color: #95D66E;
+    left: 0;
+    top: 0;
+    z-index: 1; }
   .hp-bar #myBar2 {
-    float: right; }
+    position: absolute;
+    right: 0;
+    top: 0; }
+  .hp-bar #myBar2-max {
+    position: absolute;
+    background-color: #95D66E;
+    right: 0;
+    top: 0;
+    z-index: 1; }
   .hp-bar .ko-d {
     background-color: #F2F2F2;
-    color: #212121; }
+    color: #333333; }
 
 .move-result-subgroup {
   float: left;
@@ -2234,7 +2253,7 @@ button {
   /* Negative half of width. */
   text-align: center;
   padding: 1.5% 5%;
-  border: 1px solid #212121;
+  border: 1px solid #333333;
   -webkit-box-shadow: 3px 3px 2px #565656;
   -moz-box-shadow: 3px 3px 2px #565656;
   box-shadow: 3px 3px 2px #565656; }
@@ -2395,7 +2414,7 @@ select.toxic-counter {
   left: 50%;
   margin-left: -20%;
   /* Negative half of width. */
-  border: 1px solid #212121;
+  border: 1px solid #333333;
   display: none;
   -webkit-box-shadow: 3px 3px 2px #565656;
   -moz-box-shadow: 3px 3px 2px #565656;
@@ -2422,7 +2441,7 @@ select.toxic-counter {
   left: 50%;
   margin-left: -15%;
   /* Negative half of width. */
-  border: 1px solid #212121;
+  border: 1px solid #333333;
   display: none;
   -webkit-box-shadow: 3px 3px 2px #565656;
   -moz-box-shadow: 3px 3px 2px #565656;
@@ -2433,7 +2452,7 @@ select.toxic-counter {
     margin-left: 3rem; }
     #import-popup .poke-import button {
       margin-top: 1rem;
-      border: 1px solid #212121;
+      border: 1px solid #333333;
       border-radius: 0;
       width: 25%;
       margin-left: 37%; }

@@ -147,36 +147,58 @@ $(".result-move").change(function () {
 			$("#simpleKO").text("KO Chance: " + result.koChanceText);
 
 			if (Pkm == 1) {
-				updateBar(Math.floor(100 - result.damage[7]*100/p2.maxHP),Pkm);
+				updateBar(
+					Math.floor(100 - result.damage[0]*100/p2.maxHP),
+					Math.floor(100 - result.damage[15]*100/p2.maxHP),
+					Pkm);
 			} else {
-				updateBar(Math.floor(100 - result.damage[7]*100/p1.maxHP),Pkm);
+				updateBar(
+					Math.floor(100 - result.damage[0]*100/p1.maxHP),
+					Math.floor(100 - result.damage[15]*100/p1.maxHP),
+					Pkm);
 			}
 		}
 	}
 });
 
-function updateBar(hp, pkm){
-	$("#myBar1").css("width" , 100 + '%'); 
-	$("#myBar1").text(100  + '%');
+function updateBar(hp, hpMin, pkm){
+	// Reset all values
+	$("#myBar1").css("width" , 100 + '%');
+	$("#myBar1-max").css("width" , 100 + '%');
 	$("#myBar1").removeClass('ko-d');
-	$("#myBar2").css("width" , 100 + '%'); 
-	$("#myBar2").text(100  + '%');
-	$("#myBar2").removeClass('ko-d');
+	$("#myBar1").html("&nbsp");
 
-	if (pkm == 2 && hp <= 0) {
-		$("#myBar1").css("width" , 100 + '%');
-		$("#myBar1").text("KO'd!");
-		$("#myBar1").addClass('ko-d');
-	} else if (pkm == 1 && hp <= 0) {
-		$("#myBar2").css("width" , 100 + '%');
-		$("#myBar2").text("KO'd!");
-		$("#myBar2").addClass('ko-d');
-	} else if (pkm == 2) {
-		$("#myBar1").css("width" , hp + '%'); 
-		$("#myBar1").text(hp  + '%');
+	$("#myBar2").css("width" , 100 + '%');
+	$("#myBar2-max").css("width" , 100 + '%');
+	$("#myBar2").removeClass('ko-d');
+	$("#myBar2").html("&nbsp");
+
+	if (pkm == 1){
+		if(hpMin <= 0 && hp <= 0) {
+			$("#myBar2").css("width" , 100 + '%');
+			$("#myBar2-max").css("width" , 0 + '%');
+			$("#myBar2").text("KO'd!");
+			$("#myBar2").addClass('ko-d');
+		} else if (hpMin <= 0) {
+			$("#myBar2").css("width" , hp + '%');
+			$("#myBar2-max").css("width" , 0 + '%');
+		} else {
+			$("#myBar2").css("width" , hp + '%');
+			$("#myBar2-max").css("width" , hpMin + '%');
+		}
 	} else {
-		$("#myBar2").css("width" , hp + '%'); 
-		$("#myBar2").text(hp  + '%');
+		if(hpMin <= 0 && hp <= 0) {
+			$("#myBar1").css("width" , 100 + '%');
+			$("#myBar1-max").css("width" , 0 + '%');
+			$("#myBar1").text("KO'd!");
+			$("#myBar1").addClass('ko-d');
+		} else if (hpMin <= 0) {
+			$("#myBar1").css("width" , hp + '%');
+			$("#myBar1-max").css("width" , 0 + '%');
+		} else {
+			$("#myBar1").css("width" , hp + '%');
+			$("#myBar1-max").css("width" , hpMin + '%');
+		}
 	}
 }
 
