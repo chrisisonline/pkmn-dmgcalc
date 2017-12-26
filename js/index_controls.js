@@ -131,12 +131,8 @@ $(".result-move").change(function () {
 		// CJ EDITS: Updates hp bars when you switch moves
 		var p1 = new Pokemon($("#p1"));
 		var p2 = new Pokemon($("#p2"));
-		var Pkm = 0;
-		if ($(this).parent(".btn-move").hasClass("lmoves")){
-			Pkm = 1;
-		} else {
-			Pkm = 2;
-		}
+		var moveNum = this.id.match(/\d+/) - 1;
+		var minDamage, maxDamage;
 		// alert($(this).parent(".btn-move").hasClass("lmoves"));
 		if (result) {
 			$("#mainResult").text(result.description + ": " + result.damageText + " -- " + result.koChanceText);
@@ -146,16 +142,20 @@ $(".result-move").change(function () {
 			$("#simpleMain").text("Damage: " + result.damageText);
 			$("#simpleKO").text("KO Chance: " + result.koChanceText);
 
-			if (Pkm == 1) {
+			if (this.id.match(/L/)) {
+				minDamage = result.damage[0] * p1.moves[moveNum].hits;
+				maxDamage = result.damage[result.damage.length - 1] * p1.moves[moveNum].hits;
 				updateBar(
-					Math.floor(100 - result.damage[0]*100/p2.maxHP),
-					Math.floor(100 - result.damage[15]*100/p2.maxHP),
-					Pkm);
+					100 - Math.floor(minDamage * 1000 / p2.maxHP) / 10,
+					100 - Math.floor(maxDamage * 1000 / p2.maxHP) / 10,
+					1);
 			} else {
+				minDamage = result.damage[0] * p2.moves[moveNum].hits;
+				maxDamage = result.damage[result.damage.length - 1] * p2.moves[moveNum].hits;
 				updateBar(
-					Math.floor(100 - result.damage[0]*100/p1.maxHP),
-					Math.floor(100 - result.damage[15]*100/p1.maxHP),
-					Pkm);
+					100 - Math.floor(minDamage * 1000 / p1.maxHP) / 10,
+					100 - Math.floor(maxDamage * 1000 / p1.maxHP) / 10,
+					2);
 			}
 		}
 	}
@@ -172,6 +172,8 @@ function updateBar(hp, hpMin, pkm){
 	$("#myBar2-max").css("width" , 100 + '%');
 	$("#myBar2").removeClass('ko-d');
 	$("#myBar2").html("&nbsp");
+
+	// alert(hp + " " + hpMin + " " + pkm);
 
 	if (pkm == 1){
 		if(hpMin <= 0 && hp <= 0) {
