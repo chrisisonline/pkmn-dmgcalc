@@ -1,4 +1,4 @@
-/* general page styling */
+// general page styling
 
 * {
   color: $grey-1;
@@ -118,7 +118,7 @@ button {
   width: 100%;
   padding-bottom: 1rem;
   img {
-    width: 30%;
+    width: 25%;
   }
   .pkm-img1 {
     float: left;
@@ -128,14 +128,18 @@ button {
   }
   .hp-wrap {
     float: left;
-    width: 60%;
-    margin-left: 5%;
-    padding-top: 2rem;
+    width: 70%;
+    margin: 0 2.5%;
+    padding-top: 1.5rem;
     #pkm1-name {
       float: left;
       margin-left: 0.2rem;
     }
-    #pkm1-lvl, #pkm2-name {
+    #pkm1-lvl {
+      float: right;
+      margin-right: 0.2rem;
+    }
+    #pkm2-name {
       float: right;
       margin-right: 0.2rem;
     }
@@ -151,8 +155,8 @@ button {
   width: 100%;
   background-color: $grey-4;
   border-radius: 1rem;
-  height: $boxHeight;
-  line-height: $boxHeight;
+  height: 1.6rem;
+  line-height: 1.6rem;
   .myBar {
     border-radius: 1rem;
     width: 100%;
@@ -341,7 +345,8 @@ button {
     padding-right: 5%;
   }
   .select2-container {
-    width: 65%;
+    width: 68%;
+    margin: 0;
     .select2-choice {
       border-radius: 0;
       background-image: none;
@@ -360,10 +365,12 @@ button {
   .lvlInput {
     width: 25%;
     margin-left: 5%;
-    padding: 0 0.8rem;
+    label {
+      width: 50%;
+    }
     input {
+      width: 30%;
       text-align: center;
-      width: 44px;
     }
   }
   .drop-down {
@@ -373,11 +380,6 @@ button {
     padding-right: 0.8rem;
     select {
       max-width: 55%;
-    }
-  }
-  .forme-div {
-    .forme {
-      max-width: 100%;
     }
   }
 }
@@ -412,24 +414,29 @@ button {
   float: left;
   width: 100%;
   padding: 0.25rem 0;
-  input, select {
+  input, select, label {
     min-height: $boxHeight;
     margin-left: 2%;
   }
   label {
-    min-height: $boxHeight;
-    margin-left: 2%;
     background-color: $grey-4;
     padding: 0.3rem 0;
     width: 8%;
     text-align: center;
   }
   input {
-    padding: 0.15rem 0.5rem;
+    padding: 0.3rem;
+    text-align: center;
+    width: 8%;
+  }
+  select {
+    width: 14%;
+  }
+  .move-hits {
     width: 10%;
   }
   .select2-container {
-    vertical-align: top;
+    margin-left: 0;
     width: 20%;
   }
 }
@@ -591,4 +598,4 @@ select.toxic-counter {
   }
 }
 
-/* Hide element visually, but not from screen readers. See http://adrianroselli.com/2017/05/under-engineered-custom-radio-buttons-and-checkboxen.html */
+// Hide element visually, but not from screen readers. See http://adrianroselli.com/2017/05/under-engineered-custom-radio-buttons-and-checkboxen.html

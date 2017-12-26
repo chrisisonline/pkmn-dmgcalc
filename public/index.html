@@ -210,7 +210,7 @@
                     <label for="itemL1">Item</label>
                     <select class="item terrain-trigger calc-trigger" id="itemL1"></select>
                 </div>
-                <div class="hide drop-down forme-div">
+                <div class="hide drop-down">
                     <label>Forme</label>
                     <select class="forme calc-trigger"></select>
                 </div>
@@ -509,6 +509,12 @@
             <div class="info-group">
                 <div class="move1 pokemon-moves">
                 <select class="move-selector calc-trigger small-select"></select>
+                <select class="move-hits calc-trigger hide">
+                    <option value="2">2 hits</option>
+                    <option value="3">3 hits</option>
+                    <option value="4">4 hits</option>
+                    <option value="5">5 hits</option>
+                </select>
                 <input class="move-bp calc-trigger" value="50" />
                 <select class="move-type calc-trigger"></select>
                 <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
@@ -519,15 +525,15 @@
                 <label class="btn crit-btn" for="critL1" title="Force this attack to be a critical hit?">Crit</label>
                 <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zL1"/>
                 <label class="btn z-btn gen-specific g7" for="zL1" title="Make this attack a Z-move?">Z</label>
-                <select class="move-hits calc-trigger hide">
-                    <option value="2">2 hits</option>
-                    <option value="3">3 hits</option>
-                    <option value="4">4 hits</option>
-                    <option value="5">5 hits</option>
-                </select>
                 </div>
                 <div class="move2 pokemon-moves">
                     <select class="move-selector calc-trigger small-select"></select>
+                    <select class="move-hits calc-trigger hide">
+                        <option value="2">2 hits</option>
+                        <option value="3">3 hits</option>
+                        <option value="4">4 hits</option>
+                        <option value="5">5 hits</option>
+                    </select>
                     <input class="move-bp calc-trigger" value="0" />
                     <select class="move-type calc-trigger"></select>
                     <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
@@ -538,15 +544,16 @@
                     <label class="btn crit-btn" for="critL2" title="Force this attack to be a critical hit?">Crit</label>
                     <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zL2"/>
                     <label class="btn z-btn gen-specific g7" for="zL2" title="Make this attack a Z-move?">Z</label>
+                    
+                </div>
+                <div class="move3 pokemon-moves">
+                    <select class="move-selector calc-trigger small-select"></select>
                     <select class="move-hits calc-trigger hide">
                         <option value="2">2 hits</option>
                         <option value="3">3 hits</option>
                         <option value="4">4 hits</option>
                         <option value="5">5 hits</option>
                     </select>
-                </div>
-                <div class="move3 pokemon-moves">
-                    <select class="move-selector calc-trigger small-select"></select>
                     <input class="move-bp calc-trigger" value="0" />
                     <select class="move-type calc-trigger"></select>
                     <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
@@ -557,15 +564,16 @@
                     <label class="btn crit-btn" for="critL3" title="Force this attack to be a critical hit?">Crit</label>
                     <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zL3"/>
                     <label class="btn z-btn gen-specific g7" for="zL3" title="Make this attack a Z-move?">Z</label>
+                    
+                </div>
+                <div class="move4 pokemon-moves">
+                    <select class="move-selector calc-trigger small-select"></select>
                     <select class="move-hits calc-trigger hide">
                         <option value="2">2 hits</option>
                         <option value="3">3 hits</option>
                         <option value="4">4 hits</option>
                         <option value="5">5 hits</option>
                     </select>
-                </div>
-                <div class="move4 pokemon-moves">
-                    <select class="move-selector calc-trigger small-select"></select>
                     <input class="move-bp calc-trigger" value="0" />
                     <select class="move-type calc-trigger"></select>
                     <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
@@ -576,12 +584,7 @@
                     <label class="btn crit-btn" for="critL4" title="Force this attack to be a critical hit?">Crit</label>
                     <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zL4"/>
                     <label class="btn z-btn gen-specific g7" for="zL4" title="Make this attack a Z-move?">Z</label>
-                    <select class="move-hits calc-trigger hide">
-                        <option value="2">2 hits</option>
-                        <option value="3">3 hits</option>
-                        <option value="4">4 hits</option>
-                        <option value="5">5 hits</option>
-                    </select>
+                    
                 </div>
             </div>
             
@@ -888,7 +891,7 @@
                     <select class="item terrain-trigger calc-trigger" id="itemR1"></select>
                 </div>
                 
-                <div class="hide drop-down forme-div">
+                <div class="hide drop-down">
                     <label>Forme</label>
                     <select class="forme calc-trigger"></select>
                 </div>
@@ -1151,6 +1154,12 @@
             <div class="info-group">
                 <div class="move1 pokemon-moves">
                     <select class="move-selector calc-trigger small-select"></select>
+                    <select class="move-hits calc-trigger hide">
+                        <option value="2">2 hits</option>
+                        <option value="3">3 hits</option>
+                        <option value="4">4 hits</option>
+                        <option value="5">5 hits</option>
+                    </select>
                     <input class="move-bp calc-trigger" value="50" />
                     <select class="move-type calc-trigger"></select>
                     <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
@@ -1161,15 +1170,16 @@
                     <label class="btn crit-btn" for="critR1" title="Force this attack to be a critical hit?">Crit</label>
                     <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zR1"/>
                     <label class="btn z-btn gen-specific g7" for="zR1" title="Make this attack a Z-move?">Z</label>
+                    
+                </div>
+                <div class="move2 pokemon-moves">
+                    <select class="move-selector calc-trigger small-select"></select>
                     <select class="move-hits calc-trigger hide">
                         <option value="2">2 hits</option>
                         <option value="3">3 hits</option>
                         <option value="4">4 hits</option>
                         <option value="5">5 hits</option>
                     </select>
-                </div>
-                <div class="move2 pokemon-moves">
-                    <select class="move-selector calc-trigger small-select"></select>
                     <input class="move-bp calc-trigger" value="0" />
                     <select class="move-type calc-trigger"></select>
                     <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
@@ -1180,15 +1190,16 @@
                     <label class="btn crit-btn" for="critR2" title="Force this attack to be a critical hit?">Crit</label>
                     <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zR2"/>
                     <label class="btn z-btn gen-specific g7" for="zR2" title="Make this attack a Z-move?">Z</label>
+                    
+                </div>
+                <div class="move3 pokemon-moves">
+                    <select class="move-selector calc-trigger small-select"></select>
                     <select class="move-hits calc-trigger hide">
                         <option value="2">2 hits</option>
                         <option value="3">3 hits</option>
                         <option value="4">4 hits</option>
                         <option value="5">5 hits</option>
                     </select>
-                </div>
-                <div class="move3 pokemon-moves">
-                    <select class="move-selector calc-trigger small-select"></select>
                     <input class="move-bp calc-trigger" value="0" />
                     <select class="move-type calc-trigger"></select>
                     <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
@@ -1199,15 +1210,16 @@
                     <label class="btn crit-btn" for="critR3" title="Force this attack to be a critical hit?">Crit</label>
                     <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zR3"/>
                     <label class="btn z-btn gen-specific g7" for="zR3" title="Make this attack a Z-move?">Z</label>
+                    
+                </div>
+                <div class="move4 pokemon-moves">
+                    <select class="move-selector calc-trigger small-select"></select>
                     <select class="move-hits calc-trigger hide">
                         <option value="2">2 hits</option>
                         <option value="3">3 hits</option>
                         <option value="4">4 hits</option>
                         <option value="5">5 hits</option>
                     </select>
-                </div>
-                <div class="move4 pokemon-moves">
-                    <select class="move-selector calc-trigger small-select"></select>
                     <input class="move-bp calc-trigger" value="0" />
                     <select class="move-type calc-trigger"></select>
                     <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
@@ -1218,12 +1230,7 @@
                     <label class="btn crit-btn" for="critR4" title="Force this attack to be a critical hit?">Crit</label>
                     <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zR4"/>
                     <label class="btn z-btn gen-specific g7" for="zR4" title="Make this attack a Z-move?">Z</label>
-                    <select class="move-hits calc-trigger hide">
-                        <option value="2">2 hits</option>
-                        <option value="3">3 hits</option>
-                        <option value="4">4 hits</option>
-                        <option value="5">5 hits</option>
-                    </select>
+                    
                 </div>
             </div>
         </fieldset>
