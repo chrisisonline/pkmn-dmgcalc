@@ -163,7 +163,6 @@
             
             <div class="info-group">
                 <input type="text" class="set-selector calc-trigger" />
-                <button id="clearSets" style="display:none">Clear Custom Sets</button>
                 <div class="lvlInput">
                     <label for="levelL1">Level</label>
                     <input class="level calc-trigger" id="levelL1" value="100" />
@@ -1233,6 +1232,10 @@
     <div class="other-btn-group">
         <button id="field-open-btn">Field & Other Modifiers</button>
         <button id="import-open-btn">Import Your Team</button>
+        <span id="importedSetsOptions" style="display:none"> 
+            <button id="clearSets">Clear Custom Sets</button> 
+            <input type="checkbox" id="importedSets" /> Only show imported sets <br /> 
+        </span> 
     </div>
 
     <script type="text/javascript" src="./js/data.js"></script>

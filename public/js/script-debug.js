@@ -685,6 +685,8 @@ $(".gen").change(function () {
 		calcStat = CALC_STAT_ADV;
 	}
 	clearField();
+	$("#importedSets").prop("checked", false); 
+	loadDefaultList(); 
 	$(".gen-specific.g" + gen).show();
 	$(".gen-specific").not(".g" + gen).hide();
 	var typeOptions = getSelectOptions(Object.keys(typeChart));
@@ -735,8 +737,8 @@ function clearField() {
 	$("input:checkbox[name='terrain']").prop("checked", false);
 }
 
-function getSetOptions() {
-	var pokeNames = Object.keys(pokedex);
+function getSetOptions(sets = pokedex) { 
+    var pokeNames = Object.keys(sets); 
 	pokeNames.sort();
 	var setOptions = [];
 	var idNum = 0;
@@ -873,11 +875,8 @@ function getTerrainEffects() {
 	}
 }
 
-$(document).ready(function () {
-	$("#gen7").prop("checked", true);
-	$("#gen7").change();
-	$("#percentage").prop("checked", true);
-	$("#percentage").change();
+
+function loadDefaultList() { 
 
 	$(".set-selector").select2({
 		formatResult: function (object) {
@@ -897,10 +896,43 @@ $(document).ready(function () {
 			});
 		},
 		initSelection: function (element, callback) {
-			var data = getSetOptions()[gen < 3 ? 3 : 1];
+			var data = ""; 
 			callback(data);
 		}
 	});
+} 
+ 
+function loadCustomList() { 
+  var customSetsOptions = getSetOptions(customSets); 
+  $("#p1 .set-selector").select2({ 
+      formatResult: function(set){ 
+        return set.pokemon; 
+      }, 
+      query: function(query){ 
+        var pageSize = 20; 
+        var results = _.filter(getSetOptions(), function(option){ 
+          if (option.set === "Custom Set") { 
+            return option.pokemon; 
+          } 
+        }); 
+        query.callback({ 
+          results: results, 
+          more: results.length >= query.page * pageSize 
+        }); 
+      }, 
+      initSelection: function(element, callback){ 
+        var data = ""; 
+        callback(data); 
+      } 
+    }); 
+} 
+ 
+$(document).ready(function () { 
+	$("#gen7").prop("checked", true); 
+	$("#gen7").change(); 
+	$("#percentage").prop("checked", true); 
+	$("#percentage").change(); 
+	loadDefaultList(); 
 	$(".move-selector").select2({
 		dropdownAutoWidth: true,
 		matcher: function (term, text) {
@@ -3751,13 +3783,29 @@ function checkExeptions(poke) {
 $("#clearSets").click(function(){
 	localStorage.removeItem("customsets");
 	alert("Custom Sets successfully cleared. Please refresh the page.");
-	$("#clearSets").css("display","none");
+	$("#clearSets").css("display","none"); 
+	$("#importedSetsOptions").css("display","none"); 
+	loadDefaultList(); 
 });
+
+$("#importedSets").click(function () { 
+  var showCustomSets = $(this).prop("checked"); 
+  if (showCustomSets) { 
+    loadCustomList(); 
+  } else { 
+    loadDefaultList(); 
+  } 
+}); 
+ 
+var customSets;
 
 $(document).ready(function () {
 	placeBsBtn();
 	if (localStorage.customsets) {
-		updateDex(JSON.parse(localStorage.customsets));
-		$("#clearSets").css("display","inline");
+		customSets = JSON.parse(localStorage.customsets); 
+	    updateDex(customSets);     
+	    $("#importedSetsOptions").css("display","inline"); 
+	  } else { 
+	    loadDefaultList(); 
 	}
 });
