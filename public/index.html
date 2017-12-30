@@ -64,7 +64,11 @@
             <div class="result-move-header" hidden><span id="resultHeaderL">Pok&eacute;mon 1's Moves (select one to show detailed results)</span>
             </div>
             <div class="gui">
-                <img class = "pkm-img1" src="./gui-pika.png">
+                <!-- <img class = "pkm-img1" src="./gui-blue.png"> -->
+                <div class ="pkm-img" id="pkm-img1">
+                    <img  src="./gui-blue.png">
+                    <img  id="sprite1" src="./placeholder.png">
+                </div>
                 <div class="hp-wrap">
                     <h5 id="pkm1-name">Pokemon 1</h5>
                     <h5 id="pkm1-lvl">Lvl. 100</h5>
@@ -107,7 +111,7 @@
                 <button id="show-btn">Show details</button>
             </div>
         </div>
-
+        
         <div aria-label="Calculation results" class="main-result-group" role="region" id="show-details">
                 <div class="big-text"><span id="mainResult">Loading...</span>
                 </div>
@@ -123,7 +127,10 @@
             <div class="result-move-header" hidden><span id="resultHeaderR">Pok&eacute;mon 2's Moves (select one to show detailed results)</span>
             </div>
             <div class="gui">
-                <img class = "pkm-img2" src="./gui-char.png">
+                <div class ="pkm-img" id="pkm-img2">
+                    <img  src="./gui-red.png">
+                    <img  id="sprite2" src="./placeholder.png">
+                </div>
                 <div class="hp-wrap">
                     <h5 id="pkm2-name">Pokemon 2</h5>
                     <h5 id="pkm2-lvl">Lvl. 100</h5>

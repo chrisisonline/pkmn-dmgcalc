@@ -1081,7 +1081,7 @@ $(".result-move").change(function () {
 		var p2 = new Pokemon($("#p2"));
 		var moveNum = this.id.match(/\d+/) - 1;
 		var minDamage, maxDamage;
-		// alert($(this).parent(".btn-move").hasClass("lmoves"));
+		
 		if (result) {
 			$("#mainResult").text(result.description + ": " + result.damageText + " -- " + result.koChanceText);
 			$("#damageValues").text("Possible damage amounts: (" + result.damage.join(", ") + ")");
@@ -1105,9 +1105,20 @@ $(".result-move").change(function () {
 					100 - Math.floor(maxDamage * 1000 / p1.maxHP) / 10,
 					2);
 			}
+
+			changeSprite(p1.name,1);
+			changeSprite(p2.name,2);
 		}
 	}
 });
+
+function changeSprite(name, pkm) {
+	var sprite_src = "./pkm-sprites/" + name.toLowerCase() + ".png";
+
+	if ($("#sprite" + pkm).attr("src") != sprite_src) {
+		$("#sprite" + pkm).attr("src", sprite_src);
+	}
+}
 
 function updateBar(hp, hpMin, pkm){
 	// Reset all values

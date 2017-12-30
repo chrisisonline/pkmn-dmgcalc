@@ -37,7 +37,7 @@ var paths = {
     'js/ko_chance.js',
     'js/moveset_import.js',
   ],
-  html: 'public/*.html',
+  html: 'public/**/*.html',
 };
 
 // Server Connect
@@ -46,12 +46,6 @@ gulp.task('connect', function(){
     root: 'public',
     livereload: true
   });
-});
-
-// Server Reloader
-gulp.task('livereload', function (){
-  gulp.src('./public/**/*')
-  .pipe(connect.reload());
 });
 
 // Html reloader
@@ -64,7 +58,8 @@ gulp.task('html', function(){
 gulp.task('sass', function () {
   return gulp.src(paths.sass)
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./public/css'));
+    .pipe(gulp.dest('./public/css'))
+    .pipe(connect.reload())
 });
 
 /*Java Script tasks*/
@@ -80,7 +75,6 @@ gulp.task('js:data', function(){
         }
     }))
     .pipe(gulp.dest('public/js'))
-    .pipe(connect.reload())
 });
 gulp.task('js:script', function(){
   gulp.src(paths.jsscript)
@@ -104,9 +98,8 @@ gulp.task('build', ['html','sass','js']);
 gulp.task('watch', function () {
   gulp.watch(paths.html, ['html']);
   gulp.watch('./sass/*.scss', ['sass']);
-  gulp.watch(paths.jsscript, ['js']);
+  gulp.watch(paths.jsscript, ['js:script']);
   gulp.watch(paths.jsdata, ['js']);
-  gulp.watch('./public/**/*', ['livereload']);
 });
 
 /*Default Gulp action*/
