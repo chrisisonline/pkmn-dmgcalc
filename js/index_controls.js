@@ -160,16 +160,26 @@ $(".result-move").change(function () {
 
 			changeSprite(p1.name,1);
 			changeSprite(p2.name,2);
+			updateLabels(p1.name, p1.level, 1);
+			updateLabels(p2.name, p2.level, 2);
 		}
 	}
 });
 
-function changeSprite(name, pkm) {
-	var sprite_src = "./pkm-sprites/" + name.toLowerCase() + ".png";
+function updateLabels(pkm_name, pkm_lvl, pkm_no){
+	var lvl_label = "Lvl. " + pkm_lvl;
 
-	if ($("#sprite" + pkm).attr("src") != sprite_src) {
-		$("#sprite" + pkm).attr("src", sprite_src);
-	}
+	if ($("#pkm" + pkm_no + "-name").html() != pkm_name)
+		$("#pkm" + pkm_no + "-name").html(pkm_name)
+
+	if ($("#pkm" + pkm_no + "-lvl").html() != lvl_label)
+		$("#pkm" + pkm_no + "-lvl").html(lvl_label)
+}
+function changeSprite(pkm_name, pkm_no) {
+	var sprite_src = "./pkm-sprites/" + pkm_name.toLowerCase() + ".png";
+
+	if ($("#sprite" + pkm_no).attr("src") != sprite_src)
+		$("#sprite" + pkm_no).attr("src", sprite_src);
 }
 
 function updateBar(hp, hpMin, pkm){

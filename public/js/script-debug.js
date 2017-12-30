@@ -1112,16 +1112,26 @@ $(".result-move").change(function () {
 
 			changeSprite(p1.name,1);
 			changeSprite(p2.name,2);
+			updateLabels(p1.name, p1.level, 1);
+			updateLabels(p2.name, p2.level, 2);
 		}
 	}
 });
 
-function changeSprite(name, pkm) {
-	var sprite_src = "./pkm-sprites/" + name.toLowerCase() + ".png";
+function updateLabels(pkm_name, pkm_lvl, pkm_no){
+	var lvl_label = "Lvl. " + pkm_lvl;
 
-	if ($("#sprite" + pkm).attr("src") != sprite_src) {
-		$("#sprite" + pkm).attr("src", sprite_src);
-	}
+	if ($("#pkm" + pkm_no + "-name").html() != pkm_name)
+		$("#pkm" + pkm_no + "-name").html(pkm_name)
+
+	if ($("#pkm" + pkm_no + "-lvl").html() != lvl_label)
+		$("#pkm" + pkm_no + "-lvl").html(lvl_label)
+}
+function changeSprite(pkm_name, pkm_no) {
+	var sprite_src = "./pkm-sprites/" + pkm_name.toLowerCase() + ".png";
+
+	if ($("#sprite" + pkm_no).attr("src") != sprite_src)
+		$("#sprite" + pkm_no).attr("src", sprite_src);
 }
 
 function updateBar(hp, hpMin, pkm){
@@ -3730,28 +3740,15 @@ function checkExeptions(poke) {
 	case 'Aegislash':
 		poke = "Aegislash-Blade";
 		break;
-	case 'Araquanid-Totem':
-		poke = "Araquanid";
-		break;
 	case 'Basculin-Blue-Striped':
 		poke = "Basculin";
-		break;
-	case 'Gumshoos-Totem':
-		poke = "Gumshoos";
 		break;
 	case 'Keldeo-Resolute':
 		poke = "Keldeo";
 		break;
-	case 'Kommo-o-Totem':
-		poke = "Kommo-o";
+	case 'Mimikyu-Busted-Totem':
+		poke = "Mimikyu-Totem";
 		break;
-	case 'Lurantis-Totem':
-		poke = "Lurantis";
-		break;
-	case 'Marowak-Alola-Totem':
-		poke = "Marowak-Alola";
-		break;
-	case 'Mimikyu-Totem':
 	case 'Mimikyu-Busted':
 		poke = "Mimikyu";
 		break;
@@ -3769,18 +3766,6 @@ function checkExeptions(poke) {
 	case 'Pikachu-Sinnoh':
 	case 'Pikachu-Unova':
 		poke = "Pikachu";
-		break;
-	case 'Raticate-Alola-Totem':
-		poke = "Raticate-Alola";
-		break;
-	case 'Ribombee-Totem':
-		poke = "Ribombee";
-		break;
-	case 'Salazzle-Totem':
-		poke = "Salazzle";
-		break;
-	case 'Vikavolt-Totem':
-		poke = "Vikavolt";
 		break;
 	case 'Vivillon-Fancy':
 	case 'Vivillon-Pokeball':

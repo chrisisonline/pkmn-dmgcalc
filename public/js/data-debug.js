@@ -11326,7 +11326,7 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 	"Lunatone": {"bs": {"hp": 90}},
 	"Magcargo": {"bs": {"hp": 60, "sa": 90}},
 	"Mantine": {"bs": {"hp": 85}},
-	"Marowak": {"formes": ["Marowak", "Marowak-Alola"]},
+	"Marowak": {"formes": ["Marowak", "Marowak-Alola", "Marowak-Alola-Totem"]},
 	"Masquerain": {"bs": {"sa": 100, "sp": 80}},
 	"Meowth": {"formes": ["Meowth", "Meowth-Alola"]},
 	"Muk": {"formes": ["Muk", "Muk-Alola"]},
@@ -11336,7 +11336,7 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 	"Persian": {"formes": ["Persian", "Persian-Alola"]},
 	"Qwilfish": {"bs": {"df": 85}},
 	"Raichu": {"formes": ["Raichu", "Raichu-Alola"]},
-	"Raticate": {"formes": ["Raticate", "Raticate-Alola"]},
+	"Raticate": {"formes": ["Raticate", "Raticate-Alola", "Raticate-Alola-Totem"]},
 	"Rattata": {"formes": ["Rattata", "Rattata-Alola"]},
 	"Sandshrew": {"formes": ["Sandshrew", "Sandshrew-Alola"]},
 	"Sandslash": {"formes": ["Sandslash", "Sandslash-Alola"]},
@@ -11359,6 +11359,22 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 		},
 		"ab": "Water Bubble",
 		"w": 82.0,
+		"formes": ["Araquanid", "Araquanid-Totem"]
+	},
+	"Araquanid-Totem": {
+		"t1": "Water",
+		"t2": "Bug",
+		"bs": {
+			"hp": 68,
+			"at": 70,
+			"df": 92,
+			"sa": 50,
+			"sd": 132,
+			"sp": 42
+		},
+		"ab": "Water Bubble",
+		"w": 217.5,
+		"isAlternateForme": true
 	},
 	"Bewear": {
 		"t1": "Normal",
@@ -11764,7 +11780,21 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sd": 60,
 			"sp": 45
 		},
-		"w": 14.2
+		"w": 14.2,
+		"formes": ["Gumshoos", "Gumshoos-Totem"]
+	},
+	"Gumshoos-Totem": {
+		"t1": "Normal",
+		"bs": {
+			"hp": 88,
+			"at": 110,
+			"df": 60,
+			"sa": 55,
+			"sd": 60,
+			"sp": 45
+		},
+		"w": 60,
+		"isAlternateForme": true
 	},
 	"Guzzlord": {
 		"t1": "Dark",
@@ -11854,6 +11884,22 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sp": 85
 		},
 		"w": 78.2,
+		"formes": ["Kommo-o", "Kommo-o-Totem"]
+	},
+	"Kommo-o-Totem": {
+		"t1": "Dragon",
+		"t2": "Fighting",
+		"bs": {
+			"hp": 75,
+			"at": 110,
+			"df": 125,
+			"sa": 100,
+			"sd": 105,
+			"sp": 85
+		},
+		"w": 207.5,
+		"ab": "Overcoat",
+		"isAlternateForme": true
 	},
 	"Litten": {
 		"t1": "Fire",
@@ -11892,6 +11938,21 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sp": 45
 		},
 		"w": 19.5,
+		"formes": ["Lurantis", "Lurantis-Totem"]
+	},
+	"Lurantis-Totem": {
+		"t1": "Grass",
+		"bs": {
+			"hp": 70,
+			"at": 105,
+			"df": 90,
+			"sa": 80,
+			"sd": 90,
+			"sp": 45
+		},
+		"w": 58,
+		"ab": "Leaf Guard",
+		"isAlternateForme": true
 	},
 	"Lycanroc": {
 		"t1": "Rock",
@@ -11903,7 +11964,8 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sd": 65,
 			"sp": 112
 		},
-		"w": 25.0
+		"w": 25.0,
+		"formes": ["Lycanroc", "Lycanoc-Dusk", "Lycanroc-Midnight"]
 	},
 	"Lycanroc-Dusk": {
 		"t1": "Rock",
@@ -11971,6 +12033,21 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 		},
 		"w": 34.0
 	},
+	"Marowak-Alola-Totem": {
+		"t1": "Fire",
+		"t2": "Ghost",
+		"bs": {
+			"hp": 60,
+			"at": 80,
+			"df": 110,
+			"sa": 50,
+			"sd": 80,
+			"sp": 45
+		},
+		"w": 98,
+		"ab": "Rock Head",
+		"isAlternateForme": true
+	},
 	"Marshadow": {
 		"t1": "Fighting",
 		"t2": "Ghost",
@@ -12009,6 +12086,21 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sp": 96
 		},
 		"w": 0.7,
+		"formes": ["Mimikyu", "Mimikyu-Totem"]
+	},
+	"Mimikyu-Totem": {
+		"t1": "Ghost",
+		"t2": "Fairy",
+		"bs": {
+			"hp": 55,
+			"at": 90,
+			"df": 80,
+			"sa": 50,
+			"sd": 105,
+			"sp": 96
+		},
+		"w": 2.8,
+		"isAlternateForme": true
 	},
 	"Minior": {
 		"t1": "Rock",
@@ -12036,7 +12128,7 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sp": 60
 		},
 		"w": 40.0,
-		isAlternateForme: true
+		"isAlternateForme": true
 	},
 	"Morelull": {
 		"t1": "Grass",
@@ -12114,7 +12206,8 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sp": 79
 		},
 		"w": 230.0,
-		"ab": "Prism Armor"
+		"ab": "Prism Armor",
+		"formes": ["Necrozma", "Necrozma-Dawn-Wings", "Necrozma-Dusk-Mane", "Necrozma-Ultra"]
 	},
 	"Necrozma-Dawn-Wings": {
 		"t1": "Psychic",
@@ -12128,7 +12221,8 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sp": 77
 		},
 		"w": 350.0,
-		"ab": "Prism Armor"
+		"ab": "Prism Armor",
+		"isAlternateForme": true
 	},
 	"Necrozma-Dusk-Mane": {
 		"t1": "Psychic",
@@ -12142,7 +12236,8 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sp": 77
 		},
 		"w": 460.0,
-		"ab": "Prism Armor"
+		"ab": "Prism Armor",
+		"isAlternateForme": true
 	},
 	"Necrozma-Ultra": {
 		"t1": "Psychic",
@@ -12156,7 +12251,8 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sp": 129
 		},
 		"w": 230.0,
-		"ab": "Neuroforce"
+		"ab": "Neuroforce",
+		"isAlternateForme": true
 	},
 	"Nihilego": {
 		"t1": "Rock",
@@ -12211,7 +12307,8 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sp": 93
 		},
 		"w": 3.4,
-		"ab": "Dancer"
+		"ab": "Dancer",
+		"formes": ["Oricorio", "Oricorio-Pa'u", "Oricorio-Pom-Pom", "Oricorio-Sensu"],
 	},
 	"Oricorio-Pa'u": {
 		"t1": "Psychic",
@@ -12225,7 +12322,8 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sp": 93
 		},
 		"w": 3.4,
-		"ab": "Dancer"
+		"ab": "Dancer",
+		"isAlternateForme": true
 	},
 	"Oricorio-Pom-Pom": {
 		"t1": "Electric",
@@ -12239,7 +12337,8 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sp": 93
 		},
 		"w": 3.4,
-		"ab": "Dancer"
+		"ab": "Dancer",
+		"isAlternateForme": true
 	},
 	"Oricorio-Sensu": {
 		"t1": "Ghost",
@@ -12253,7 +12352,8 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sp": 93
 		},
 		"w": 3.4,
-		"ab": "Dancer"
+		"ab": "Dancer",
+		"isAlternateForme": true
 	},
 	"Pajantom": {
 		"t1": "Dragon",
@@ -12411,6 +12511,21 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 		"w": 25.5,
 		"isAlternateForme": true
 	},
+	"Raticate-Alola-Totem": {
+		"t1": "Dark",
+		"t2": "Normal",
+		"bs": {
+			"hp": 75,
+			"at": 71,
+			"df": 70,
+			"sa": 40,
+			"sd": 80,
+			"sp": 77
+		},
+		"w": 105,
+		"ab": "Thick Fat",
+		"isAlternateForme": true
+	},
 	"Rattata-Alola": {
 		"t1": "Dark",
 		"t2": "Normal",
@@ -12436,7 +12551,23 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sd": 70,
 			"sp": 124
 		},
-		"w": 0.5
+		"w": 0.5,
+		"formes": ["Ribombee", "Ribombee-Totem"]
+	},
+	"Ribombee-Totem": {
+		"t1": "Bug",
+		"t2": "Fairy",
+		"bs": {
+			"hp": 60,
+			"at": 55,
+			"df": 60,
+			"sa": 95,
+			"sd": 70,
+			"sp": 124
+		},
+		"w": 2,
+		"ab": "Sweet Veil",
+		"isAlternateForme": true
 	},
 	"Rockruff": {
 		"t1": "Rock",
@@ -12488,6 +12619,22 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sp": 117
 		},
 		"w": 22.2,
+		"formes": ["Salazzle", "Salazzle-Totem"]
+	},
+	"Salazzle-Totem": {
+		"t1": "Poison",
+		"t2": "Fire",
+		"bs": {
+			"hp": 68,
+			"at": 64,
+			"df": 60,
+			"sa": 111,
+			"sd": 60,
+			"sp": 117
+		},
+		"w": 81,
+		"ab": "Corrosion",
+		"isAlternateForme": true
 	},
 	"Sandshrew-Alola": {
 		"t1": "Ice",
@@ -12897,8 +13044,24 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sd": 73,
 			"sp": 96
 		},
-		"w": 7.3,
-		"ab": "Lightning Rod"
+		"w": 3.3,
+		"ab": "Lightning Rod",
+		"formes": ["Togedemaru", "Togedemaru-Totem"]
+	},
+	"Togedemaru-Totem": {
+		"t1": "Electric",
+		"t2": "Steel",
+		"bs": {
+			"hp": 65,
+			"at": 98,
+			"df": 63,
+			"sa": 40,
+			"sd": 73,
+			"sp": 96
+		},
+		"w": 13,
+		"ab": "Sturdy",
+		"isAlternateForme": true
 	},
 	"Torracat": {
 		"t1": "Fire",
@@ -13003,7 +13166,23 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sp": 43
 		},
 		"w": 45.0,
-		"ab": "Levitate"
+		"ab": "Levitate",
+		"formes": ["Vikavolt", "Vikavolt-Totem"]
+	},
+	"Vikavolt-Totem": {
+		"t1": "Bug",
+		"t2": "Electric",
+		"bs": {
+			"hp": 77,
+			"at": 70,
+			"df": 90,
+			"sa": 145,
+			"sd": 75,
+			"sp": 43
+		},
+		"w": 147.5,
+		"ab": "Levitate",
+		"isAlternateForme": true
 	},
 	"Vulpix-Alola": {
 		"t1": "Ice",
@@ -13056,7 +13235,7 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sp": 30
 		},
 		"w": 78.6,
-		isAlternateForme: true
+		"isAlternateForme": true
 	},
 	"Xurkitree": {
 		"t1": "Electric",
@@ -13108,7 +13287,7 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 		},
 		"w": 33.5,
 		"ab": "Power Construct",
-		isAlternateForme: true
+		"isAlternateForme": true
 	},
 	"Zygarde-Complete": {
 		"t1": "Dragon",
@@ -13123,7 +13302,7 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 		},
 		"w": 610.0,
 		"ab": "Power Construct",
-		isAlternateForme: true
+		"isAlternateForme": true
 	}
 });
 
