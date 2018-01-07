@@ -321,9 +321,12 @@ if (screen.width <= 600) {
 	$('.pkm-2-move').hide();
 	$('.pkm-2').hide();
 }
+var cachedWidth = $(window).width();
 $(window).resize(function(){
-    if (screen.width <= 600) {
+	var updateWidth = $(window).width();
+    if ((screen.width <= 600) && ($(window).width() != udpateWidth)) {
 		document.location = "mobile.html";
+        cachedWidth = updateWidth;
 	} else {
 		document.location = "index.html";
 	}
