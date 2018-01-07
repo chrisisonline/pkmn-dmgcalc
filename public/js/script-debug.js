@@ -900,7 +900,7 @@ function loadDefaultList() {
 			});
 		},
 		initSelection: function (element, callback) {
-			var data = ""; 
+			var data = getSetOptions()[gen < 3 ? 3 : 1];
 			callback(data);
 		}
 	});
@@ -1268,6 +1268,35 @@ $(document).on('focus', 'input', function () {
     setTimeout(function () { focusedElement.select(); }, 50); //select all text in any field on focus for easy re-entry. Delay sightly to allow focus to "stick" before selecting.
 });
 
+// Mobile App initialization
+if (screen.width <= 600) {
+	$('.pkm-2-move').hide();
+	$('.pkm-2').hide();
+}
+$(window).resize(function(){
+    if (screen.width <= 600) {
+		document.location = "mobile.html";
+	} else {
+		document.location = "index.html";
+	}
+});
+
+function swapPkm() {
+	$('.pkm-2-move').toggle();
+	$('.pkm-1-move').toggle();
+	$('.pkm-2').toggle();
+	$('.pkm-1').toggle();
+}
+$('.pkm-swap1').click(function() {
+	if (!($('.pkm-1').is(":visible"))){
+		swapPkm();
+	}
+});
+$('.pkm-swap2').click(function() {
+	if (!($('.pkm-2').is(":visible"))){
+		swapPkm();
+	}
+});
 
 function CALCULATE_ALL_MOVES_BW(p1, p2, field) {
 	checkAirLock(p1, field);

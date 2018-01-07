@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
 .select2-container {
   margin: 0;
   position: relative;
@@ -2025,7 +2026,7 @@ a img {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Nunito Sans', sans-serif; }
 
 html, body {
   font: 10pt Verdana, sans-serif;
@@ -2039,9 +2040,22 @@ div {
   overflow: hidden; }
 
 .wrapper {
-  padding: 0 1em;
-  width: 70%;
-  margin: 0 15%; }
+  padding: 0 1rem;
+  width: 60%;
+  margin: 0 20%; }
+  @media screen and (max-width: 1800px) {
+    .wrapper {
+      width: 70%;
+      margin: 0 15%; } }
+  @media screen and (max-width: 1200px) {
+    .wrapper {
+      width: 90%;
+      margin: 0 5%; } }
+  @media screen and (max-width: 900px) {
+    .wrapper {
+      width: 100%;
+      margin: 0;
+      padding: 0 0.4rem; } }
 
 div.wrapper > div > span {
   padding-right: 5px; }
@@ -2076,12 +2090,22 @@ th {
 .panel {
   width: 48%;
   float: left; }
+  @media screen and (max-width: 600px) {
+    .panel {
+      width: 100%;
+      margin: 0; } }
 
 .pkm-1 {
   margin-right: 2%; }
+  @media screen and (max-width: 600px) {
+    .pkm-1 {
+      margin: 0; } }
 
 .pkm-2 {
   margin-left: 1.5%; }
+  @media screen and (max-width: 600px) {
+    .pkm-2 {
+      margin: 0; } }
 
 .poke-info {
   width: 100%;
@@ -2198,9 +2222,13 @@ button {
 .move-result-subgroup {
   float: left;
   width: 35%; }
+  @media screen and (max-width: 600px) {
+    .move-result-subgroup {
+      width: 80%;
+      margin: 0 10%; } }
   .move-result-subgroup .btn-move {
     position: relative;
-    width: 47.5%;
+    width: 47%;
     margin: 1%;
     padding: 2%;
     border: 1px solid; }
@@ -2247,6 +2275,10 @@ button {
 
 .mid-sub-group {
   width: 30%; }
+  @media screen and (max-width: 600px) {
+    .mid-sub-group {
+      width: 100%;
+      margin: 0 0 1.5rem 0; } }
 
 #gui-logo {
   width: 80%;
@@ -2275,6 +2307,11 @@ button {
   -webkit-box-shadow: 3px 3px 2px #565656;
   -moz-box-shadow: 3px 3px 2px #565656;
   box-shadow: 3px 3px 2px #565656; }
+  @media screen and (max-width: 600px) {
+    #show-details {
+      width: 90%;
+      margin-left: -45%;
+      height: 25%; } }
   #show-details button {
     display: block;
     margin: 1% auto; }
@@ -2440,6 +2477,12 @@ select.toxic-counter {
   -webkit-box-shadow: 3px 3px 2px #565656;
   -moz-box-shadow: 3px 3px 2px #565656;
   box-shadow: 3px 3px 2px #565656; }
+  @media screen and (max-width: 600px) {
+    #field-popup {
+      width: 90%;
+      margin-left: -45%;
+      top: 1rem;
+      height: 96%; } }
   #field-popup div, #field-popup table {
     width: 100%; }
   #field-popup .field-info {
@@ -2451,6 +2494,12 @@ select.toxic-counter {
     float: left;
     margin-left: 35%;
     width: 30%; }
+    @media screen and (max-width: 600px) {
+      #field-popup #field-close-btn {
+        width: 50%;
+        margin-left: 25%;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem; } }
 
 #import-popup {
   z-index: 4;
@@ -2467,6 +2516,10 @@ select.toxic-counter {
   -webkit-box-shadow: 3px 3px 2px #565656;
   -moz-box-shadow: 3px 3px 2px #565656;
   box-shadow: 3px 3px 2px #565656; }
+  @media screen and (max-width: 600px) {
+    #import-popup {
+      width: 90%;
+      margin-left: -45%; } }
   #import-popup .poke-import {
     border: none;
     margin-top: 1em;
@@ -2487,6 +2540,13 @@ select.toxic-counter {
   margin-top: 2rem; }
   .other-btn-group button {
     margin-right: 2rem; }
+    @media screen and (max-width: 600px) {
+      .other-btn-group button {
+        width: 40%;
+        margin: 0 4.7%; } }
+  @media screen and (max-width: 600px) {
+    .other-btn-group #clearSets {
+      margin-top: 1rem; } }
 
 [hidden], .hide {
   display: none; }

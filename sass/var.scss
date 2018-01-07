@@ -17,6 +17,19 @@
     box-shadow: $top $left $blur $color;
   }
 }
+$breakpoints: (
+  'mobile':  400px, //Mobile
+  'mobile-l': 600px, //Tablet
+  'tablet': 900px, //Tablet landscape
+  'tablet-l':  1200px, //Laptop
+  'laptop':  1800px, //Laptop
+) !default;
+@mixin display-size($breakpoint) {
+  // Prints a media query based on the value
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
 // Colours
 $grey-1: #333333;
 $grey-3: #565656;

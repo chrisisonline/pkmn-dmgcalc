@@ -5,7 +5,9 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
+
+  // Google Fonts
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 html, body {
@@ -22,9 +24,23 @@ div {
 }
 
 .wrapper {
-  padding: 0 1em;
-  width: 70%;
-  margin: 0 15%;
+  padding: 0 1rem;
+  width: 60%;
+  margin: 0 20%;
+
+  @include display-size('laptop') {
+    width: 70%;
+    margin: 0 15%;
+  }
+  @include display-size('tablet-l') {
+    width: 90%;
+    margin: 0 5%;
+  }
+  @include display-size('tablet') {
+    width: 100%;
+    margin: 0;
+    padding: 0 0.4rem;
+  }
 }
 
 div.wrapper > div > span {
@@ -68,14 +84,24 @@ th {
 .panel {
   width: 48%;
   float: left;
+  @include display-size('mobile-l') {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .pkm-1 {
   margin-right: 2%;
+  @include display-size('mobile-l') {
+    margin: 0;
+  }
 }
 
 .pkm-2 {
   margin-left: 1.5%;
+  @include display-size('mobile-l') {
+    margin: 0;
+  }
 }
 
 .poke-info {
@@ -142,6 +168,7 @@ button {
     width: 25%;
     float: right;
   }
+  
   #sprite2 {
     position: absolute;
     width: 100%;
@@ -219,9 +246,13 @@ button {
 .move-result-subgroup {
   float: left;
   width: 35%;
+  @include display-size('mobile-l') {
+    width: 80%;
+    margin: 0 10%;
+  }
   .btn-move {
     position: relative;
-    width: 47.5%;
+    width: 47%;
     margin: 1%;
     padding: 2%;
     border: 1px solid;
@@ -280,6 +311,11 @@ button {
 
 .mid-sub-group {
   width: 30%;
+
+  @include display-size('mobile-l') {
+    width: 100%;
+    margin: 0 0 1.5rem 0;
+  }
 }
 
 #gui-logo {
@@ -310,6 +346,11 @@ button {
   padding: 1.5% 5%;
   border: 1px solid $grey-1;
   @include box-shadow(3px,3px,2px,$grey-3);
+  @include display-size('mobile-l') {
+    width: 90%;
+    margin-left: -45%;
+    height: 25%;
+  }
   button {
     display: block;
     margin: 1% auto;
@@ -512,6 +553,12 @@ select.toxic-counter {
   border: 1px solid $grey-1;
   display: none;
   @include box-shadow(3px,3px,2px,$grey-3);
+  @include display-size('mobile-l') {
+    width: 90%;
+    margin-left: -45%;
+    top: 1rem;
+    height: 96%;
+  }
   div, table {
     width: 100%;
   }
@@ -525,6 +572,12 @@ select.toxic-counter {
     float: left;
     margin-left: 35%;
     width: 30%;
+    @include display-size('mobile-l') {
+      width: 50%;
+      margin-left: 25%;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
   }
 }
 
@@ -541,6 +594,10 @@ select.toxic-counter {
   border: 1px solid $grey-1;
   display: none;
   @include box-shadow(3px,3px,2px,$grey-3);
+  @include display-size('mobile-l') {
+    width: 90%;
+    margin-left: -45%;
+  }
 
   .poke-import {
     border: none;
@@ -566,6 +623,15 @@ select.toxic-counter {
   margin-top: 2rem;
   button {
     margin-right: 2rem;
+    @include display-size('mobile-l') {
+      width: 40%;
+      margin: 0 4.7%;
+    }
+  }
+  @include display-size('mobile-l') {
+    #clearSets {
+      margin-top: 1rem;
+    }
   }
 }
 

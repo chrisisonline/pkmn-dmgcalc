@@ -56,27 +56,55 @@
     <hr style="border-width: 0px;"/>
 
     <div aria-label="Move selection" class="move-result-group" role="region" title="Select a move to show detailed results.">
-            
+        <div class="gui">
+            <div class ="pkm-img pkm-swap1" id="pkm-img1">
+                <img  src="./gui-blue.png">
+                <img  id="sprite1" src="./placeholder.png">
+            </div>
+            <div class="hp-wrap">
+                <h5 id="pkm1-name">Pokemon 1</h5>
+                <h5 id="pkm1-lvl">Lvl. 100</h5>
+                <div class="hp-bar">
+                    <div class="myBar" id="myBar1">&nbsp</div>
+                    <div class="myBar" id="myBar1-max">&nbsp</div>
+                </div>
+            </div>
+            <div class ="pkm-img pkm-swap2" id="pkm-img2">
+                <img  src="./gui-red.png">
+                <img  id="sprite2" src="./placeholder.png">
+            </div>
+            <div class="hp-wrap">
+                <h5 id="pkm2-name">Pokemon 2</h5>
+                <h5 id="pkm2-lvl">Lvl. 100</h5>
+                <div class="hp-bar">
+                    <div class="myBar" id="myBar2">&nbsp</div>
+                    <div class="myBar" id="myBar2-max">&nbsp</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="move-result-subgroup mid-sub-group" >
+            <div class="simple-results">
+                <div class="simple-text" id="simpleMain"></div>
+                <div class="simple-text" id="simpleKO"></div>
+                <br>
+                <button id="show-btn">Show details</button>
+            </div>
+        </div>
+        <div aria-label="Calculation results" class="main-result-group" role="region" id="show-details">
+                <div class="big-text"><span id="mainResult">Loading...</span>
+                </div>
+                <br>
+                <div class="small-text"><span id="damageValues">(If you see this message for more than a few seconds, try enabling JavaScript.)</span>
+                </div>
+                <br>
+                <button id="close-btn">Close Window</button>
+        </div>
+
         <div  aria-labelledby="resultHeaderL" class="move-result-subgroup pkm-1-move" role="radiogroup">
             <!-- I HID THIS -->
             <div class="result-move-header" hidden><span id="resultHeaderL">Pok&eacute;mon 1's Moves (select one to show detailed results)</span>
             </div>
-            <div class="gui">
-                <!-- <img class = "pkm-img1" src="./gui-blue.png"> -->
-                <div class ="pkm-img" id="pkm-img1">
-                    <img  src="./gui-blue.png">
-                    <img  id="sprite1" src="./placeholder.png">
-                </div>
-                <div class="hp-wrap">
-                    <h5 id="pkm1-name">Pokemon 1</h5>
-                    <h5 id="pkm1-lvl">Lvl. 100</h5>
-                    <div class="hp-bar">
-                        <div class="myBar" id="myBar1">&nbsp</div>
-                        <div class="myBar" id="myBar1-max">&nbsp</div>
-                    </div>
-                </div>
-            </div>
-            
             <div class="btn-move lmoves">
                 <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveL1" checked="checked" aria-describedby="resultDamageL1" />
                 <label class="" for="resultMoveL1">Hi Jump Kick</label>
@@ -98,45 +126,10 @@
                 <span id="resultDamageL4">??? - ???%</span>
             </div>
         </div>
-
-        
-        <div class="move-result-subgroup mid-sub-group" >
-            <img id="gui-logo" src="gui-logo.png">
-            <div class="simple-results">
-                <div class="simple-text" id="simpleMain"></div>
-                <div class="simple-text" id="simpleKO"></div>
-                <br>
-                <button id="show-btn">Show details</button>
-            </div>
-        </div>
-        
-        <div aria-label="Calculation results" class="main-result-group" role="region" id="show-details">
-                <div class="big-text"><span id="mainResult">Loading...</span>
-                </div>
-                <br>
-                <div class="small-text"><span id="damageValues">(If you see this message for more than a few seconds, try enabling JavaScript.)</span>
-                </div>
-                <br>
-                <button id="close-btn">Close Window</button>
-        </div>
         
         <div aria-labelledby="resultHeaderR" class="move-result-subgroup pkm-2-move" role="radiogroup">
             <!-- I HID THIS -->
             <div class="result-move-header" hidden><span id="resultHeaderR">Pok&eacute;mon 2's Moves (select one to show detailed results)</span>
-            </div>
-            <div class="gui">
-                <div class ="pkm-img" id="pkm-img2">
-                    <img  src="./gui-red.png">
-                    <img  id="sprite2" src="./placeholder.png">
-                </div>
-                <div class="hp-wrap">
-                    <h5 id="pkm2-name">Pokemon 2</h5>
-                    <h5 id="pkm2-lvl">Lvl. 100</h5>
-                    <div class="hp-bar">
-                        <div class="myBar" id="myBar2">&nbsp</div>
-                        <div class="myBar" id="myBar2-max">&nbsp</div>
-                    </div>
-                </div>
             </div>
 
             <div class="btn-move rmoves">
@@ -160,6 +153,7 @@
                 <span id="resultDamageR4">??? - ???%</span>
             </div>
         </div>
+
     </div>
     
     <div aria-label="Edit Pok&eacute;mon 1" class="panel pkm-1" role="region">
@@ -1252,11 +1246,6 @@
 
     <script type="text/javascript" src="./js/data.js"></script>
     <script type="text/javascript" src="./js/script.js"></script>
-    <script type="text/javascript">
-        if (screen.width <= 600){
-            document.location = "mobile.html";
-        }
-    </script>
     <!--
     <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="./js/lodash.min.js"></script>
