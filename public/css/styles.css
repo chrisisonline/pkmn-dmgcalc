@@ -2295,23 +2295,20 @@ button {
   z-index: 2;
   position: fixed;
   background-color: white;
-  width: 60%;
-  height: 18%;
+  min-width: 70%;
   top: 10%;
   left: 50%;
-  margin-left: -30%;
+  transform: translateX(-50%);
   /* Negative half of width. */
   text-align: center;
-  padding: 1.5% 5%;
+  padding: 1.5rem 2rem;
   border: 1px solid #333333;
   -webkit-box-shadow: 3px 3px 2px #565656;
   -moz-box-shadow: 3px 3px 2px #565656;
   box-shadow: 3px 3px 2px #565656; }
   @media screen and (max-width: 600px) {
     #show-details {
-      width: 90%;
-      margin-left: -45%;
-      height: 25%; } }
+      width: 90%; } }
   #show-details button {
     display: block;
     margin: 1% auto; }
@@ -2328,7 +2325,7 @@ button {
   margin: 0 0 5px; }
 
 /* pokemon info */
-/* 
+/*
 .poke-info input:not([type]), .poke-info input[type="text"], .poke-info span {
     display: inline-block;
     // width: 46px;
@@ -2467,10 +2464,11 @@ select.toxic-counter {
   position: fixed;
   background-color: white;
   width: 40%;
-  height: 85%;
-  top: 5%;
+  max-height: 95%;
+  overflow-y: scroll;
+  top: 1rem;
   left: 50%;
-  margin-left: -20%;
+  transform: translateX(-50%);
   /* Negative half of width. */
   border: 1px solid #333333;
   display: none;
@@ -2480,20 +2478,27 @@ select.toxic-counter {
   @media screen and (max-width: 600px) {
     #field-popup {
       width: 90%;
-      margin-left: -45%;
-      top: 1rem;
-      height: 96%; } }
+      top: 1rem; } }
   #field-popup div, #field-popup table {
     width: 100%; }
-  #field-popup .field-info {
+  #field-popup .field-wrapper {
     float: left;
-    width: 80%;
-    margin: 5% 10% 3.5%;
+    width: 100%;
+    padding: 2rem; }
+  #field-popup .field-info {
+    width: inherit;
+    border: none;
+    padding: 1rem;
+    padding-bottom: 2rem;
     font-size: 0.875rem; }
   #field-popup #field-close-btn {
     float: left;
-    margin-left: 35%;
-    width: 30%; }
+    width: 30%;
+    margin-left: 35%; }
+    @media screen and (max-width: 900px) {
+      #field-popup #field-close-btn {
+        width: 50%;
+        margin-left: 25%; } }
     @media screen and (max-width: 600px) {
       #field-popup #field-close-btn {
         width: 50%;
@@ -2505,11 +2510,10 @@ select.toxic-counter {
   z-index: 4;
   position: fixed;
   background-color: white;
-  width: 30%;
-  height: 45%;
-  top: 20%;
+  min-width: 40%;
+  top: 10%;
   left: 50%;
-  margin-left: -15%;
+  transform: translateX(-50%);
   /* Negative half of width. */
   border: 1px solid #333333;
   display: none;
@@ -2518,22 +2522,29 @@ select.toxic-counter {
   box-shadow: 3px 3px 2px #565656; }
   @media screen and (max-width: 600px) {
     #import-popup {
-      width: 90%;
-      margin-left: -45%; } }
+      width: 90%; } }
+  #import-popup .import-wrapper {
+    padding: 1.5rem;
+    width: 100%; }
+    @media screen and (max-width: 600px) {
+      #import-popup .import-wrapper {
+        padding: .5rem; } }
   #import-popup .poke-import {
     border: none;
-    margin-top: 1em;
-    margin-left: 3rem; }
+    padding: 0;
+    margin: 0;
+    width: 100%; }
     #import-popup .poke-import button {
       margin-top: 1rem;
       border: 1px solid #333333;
       border-radius: 0;
       width: 25%;
-      margin-left: 37%; }
+      margin-left: 50%;
+      transform: translateX(-50%); }
+    #import-popup .poke-import #import-1_wrapper {
+      width: 100%; }
   #import-popup #import-close-btn {
     float: right;
-    margin-top: 1rem;
-    margin-right: 1rem;
     padding: 0.3rem 0.8rem; }
 
 .other-btn-group {
@@ -2560,9 +2571,11 @@ select.toxic-counter {
   clear: right; }
 
 .import-team-text {
-  min-width: 27em;
+  margin: 1rem 10%;
+  min-width: 80%;
   min-height: 10em;
-  resize: vertical; }
+  resize: vertical;
+  border: 1px #565656 solid; }
 
 .visually-hidden:focus + .btn, .btn:hover {
   z-index: 10;

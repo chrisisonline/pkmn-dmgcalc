@@ -7,7 +7,7 @@
     <!-- <link type="text/css" rel="stylesheet" href="./select2/select2.css" />
     <link type="text/css" rel="stylesheet" href="./shared_controls.css?" />
     <link type="text/css" rel="stylesheet" href="./bootstrap.css" /> -->
-    
+
     <link type="text/css" rel="stylesheet" href="./css/styles.css" />
 </head>
 
@@ -56,7 +56,7 @@
     <hr style="border-width: 0px;"/>
 
     <div aria-label="Move selection" class="move-result-group" role="region" title="Select a move to show detailed results.">
-            
+
         <div  aria-labelledby="resultHeaderL" class="move-result-subgroup pkm-1-move" role="radiogroup">
             <!-- I HID THIS -->
             <div class="result-move-header" hidden><span id="resultHeaderL">Pok&eacute;mon 1's Moves (select one to show detailed results)</span>
@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="btn-move lmoves">
                 <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveL1" checked="checked" aria-describedby="resultDamageL1" />
                 <label class="" for="resultMoveL1">Hi Jump Kick</label>
@@ -99,7 +99,7 @@
             </div>
         </div>
 
-        
+
         <div class="move-result-subgroup mid-sub-group" >
             <img id="gui-logo" src="gui-logo.png">
             <div class="simple-results">
@@ -109,7 +109,7 @@
                 <button id="show-btn">Show details</button>
             </div>
         </div>
-        
+
         <div aria-label="Calculation results" class="main-result-group" role="region" id="show-details">
                 <div class="big-text"><span id="mainResult">Loading...</span>
                 </div>
@@ -119,7 +119,7 @@
                 <br>
                 <button id="close-btn">Close Window</button>
         </div>
-        
+
         <div aria-labelledby="resultHeaderR" class="move-result-subgroup pkm-2-move" role="radiogroup">
             <!-- I HID THIS -->
             <div class="result-move-header" hidden><span id="resultHeaderR">Pok&eacute;mon 2's Moves (select one to show detailed results)</span>
@@ -161,11 +161,11 @@
             </div>
         </div>
     </div>
-    
+
     <div aria-label="Edit Pok&eacute;mon 1" class="panel pkm-1" role="region">
         <fieldset class="poke-info" id="p1">
             <legend align="center">Pok&eacute;mon 1</legend>
-            
+
             <div class="info-group">
                 <input type="text" class="set-selector calc-trigger" />
                 <div class="lvlInput">
@@ -219,7 +219,7 @@
                     <label>Forme</label>
                     <select class="forme calc-trigger"></select>
                 </div>
-                
+
                 <div class="hide">
                     <label for="weightL1">Weight (kg)</label>
                     <input class="weight calc-trigger" id="weightL1" value="10.0" />
@@ -549,7 +549,7 @@
                     <label class="btn crit-btn" for="critL2" title="Force this attack to be a critical hit?">Crit</label>
                     <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zL2"/>
                     <label class="btn z-btn gen-specific g7" for="zL2" title="Make this attack a Z-move?">Z</label>
-                    
+
                 </div>
                 <div class="move3 pokemon-moves">
                     <select class="move-selector calc-trigger small-select"></select>
@@ -569,7 +569,7 @@
                     <label class="btn crit-btn" for="critL3" title="Force this attack to be a critical hit?">Crit</label>
                     <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zL3"/>
                     <label class="btn z-btn gen-specific g7" for="zL3" title="Make this attack a Z-move?">Z</label>
-                    
+
                 </div>
                 <div class="move4 pokemon-moves">
                     <select class="move-selector calc-trigger small-select"></select>
@@ -589,16 +589,16 @@
                     <label class="btn crit-btn" for="critL4" title="Force this attack to be a critical hit?">Crit</label>
                     <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zL4"/>
                     <label class="btn z-btn gen-specific g7" for="zL4" title="Make this attack a Z-move?">Z</label>
-                    
+
                 </div>
             </div>
-            
+
         </fieldset>
     </div>
-    
+
     <!-- I HID THIS -->
     <div class="panel" id="field-popup">
-        <div aria-label="Field information" role="region" >
+        <div aria-label="Field information" class="field-wrapper" role="region" >
             <fieldset class="field-info">
                 <legend align="center">Field</legend>
                 <div aria-labelledby="selectBattleFormatInstruction" class="gen-specific g3 g4 g5 g6 g7" role="radiogroup" style="width: 10.6em; margin: 0 auto 5px;" title="Select the battle format.">
@@ -794,18 +794,21 @@
             </fieldset>
             <button id="field-close-btn">Close Window</button>
         </div>
-        
+
     </div>
     <div aria-label="Import team" id="import-popup" role="region">
-        <button id="import-close-btn">x</button>
-        <fieldset class="poke-import">
-            <legend align="center">Import Team</legend>
-            <div id="import-1_wrapper" class="dataTables_wrapper no-footer">
-                <form class="import-team">
-                    <textarea class="import-team-text"></textarea>
-                </form>
-            </div>
-        </fieldset>
+        <div class="import-wrapper">
+            <button id="import-close-btn">x</button>
+            <fieldset class="poke-import">
+                <legend align="center">Import Team</legend>
+                <div id="import-1_wrapper" class="dataTables_wrapper no-footer">
+                    <form class="import-team">
+                        <textarea class="import-team-text"></textarea>
+                    </form>
+                </div>
+            </fieldset>
+        </div>
+
     </div>
 
     <div aria-label="Edit Pok&eacute;mon 2" class="panel pkm-2" role="region">
@@ -895,7 +898,7 @@
                     <label for="itemR1">Item</label>
                     <select class="item terrain-trigger calc-trigger" id="itemR1"></select>
                 </div>
-                
+
                 <div class="hide drop-down">
                     <label>Forme</label>
                     <select class="forme calc-trigger"></select>
@@ -1175,7 +1178,7 @@
                     <label class="btn crit-btn" for="critR1" title="Force this attack to be a critical hit?">Crit</label>
                     <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zR1"/>
                     <label class="btn z-btn gen-specific g7" for="zR1" title="Make this attack a Z-move?">Z</label>
-                    
+
                 </div>
                 <div class="move2 pokemon-moves">
                     <select class="move-selector calc-trigger small-select"></select>
@@ -1195,7 +1198,7 @@
                     <label class="btn crit-btn" for="critR2" title="Force this attack to be a critical hit?">Crit</label>
                     <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zR2"/>
                     <label class="btn z-btn gen-specific g7" for="zR2" title="Make this attack a Z-move?">Z</label>
-                    
+
                 </div>
                 <div class="move3 pokemon-moves">
                     <select class="move-selector calc-trigger small-select"></select>
@@ -1215,7 +1218,7 @@
                     <label class="btn crit-btn" for="critR3" title="Force this attack to be a critical hit?">Crit</label>
                     <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zR3"/>
                     <label class="btn z-btn gen-specific g7" for="zR3" title="Make this attack a Z-move?">Z</label>
-                    
+
                 </div>
                 <div class="move4 pokemon-moves">
                     <select class="move-selector calc-trigger small-select"></select>
@@ -1235,7 +1238,7 @@
                     <label class="btn crit-btn" for="critR4" title="Force this attack to be a critical hit?">Crit</label>
                     <input aria-describedby="zMoveInstruction" class="move-z calc-trigger visually-hidden" type="checkbox" id="zR4"/>
                     <label class="btn z-btn gen-specific g7" for="zR4" title="Make this attack a Z-move?">Z</label>
-                    
+
                 </div>
             </div>
         </fieldset>
@@ -1244,10 +1247,10 @@
     <div class="other-btn-group">
         <button id="field-open-btn">Field & Other Modifiers</button>
         <button id="import-open-btn">Import Your Team</button>
-        <span id="importedSetsOptions" style="display:none"> 
-            <button id="clearSets">Clear Custom Sets</button> 
-            <input type="checkbox" id="importedSets" /> Only show imported sets <br /> 
-        </span> 
+        <span id="importedSetsOptions" style="display:none">
+            <button id="clearSets">Clear Custom Sets</button>
+            <input type="checkbox" id="importedSets" /> Only show imported sets <br />
+        </span>
     </div>
 
     <script type="text/javascript" src="./js/data.js"></script>
