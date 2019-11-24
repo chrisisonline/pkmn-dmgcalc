@@ -133,7 +133,7 @@ button {
   border: 1px solid $grey-1;
   padding: 1rem 2rem;
   &:hover {
-    background-color: $grey-4;
+    background-color: $grey-5;
     @include transition(all 0.15s ease-in);
   }
 }
@@ -160,6 +160,7 @@ button {
     position: absolute;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 1;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
@@ -173,6 +174,7 @@ button {
     position: absolute;
     width: 100%;
     top: 0;
+    right: 0;
     z-index: 1;
   }
 
@@ -202,7 +204,7 @@ button {
 .hp-bar {
   position: relative;
   width: 100%;
-  background-color: $grey-4;
+  background-color: $grey-5;
   border-radius: 1rem;
   height: 1.6rem;
   line-height: 1.6rem;
@@ -238,7 +240,7 @@ button {
     z-index: 1;
   }
   .ko-d {
-    background-color: $grey-4;
+    background-color: $grey-5;
     color: $grey-1;
   }
 }
@@ -389,7 +391,7 @@ button {
     font-size: $fontSize-xs;
   }
   .select2-results .select2-highlighted {
-    background: $grey-4;
+    background: $grey-5;
   }
 }
 
@@ -415,7 +417,7 @@ button {
     }
     .select2-arrow {
       background-image: none;
-      background-color: $grey-4;
+      background-color: $grey-5;
     }
     .select2-chosen {
       min-height: $boxHeight;
@@ -479,7 +481,6 @@ button {
     margin-left: 2%;
   }
   label {
-    background-color: $grey-4;
     padding: 0.3rem 0;
     width: 8%;
     text-align: center;
@@ -514,27 +515,29 @@ select.toxic-counter {
   width: 4.5rem;
 }
 
-/* .move-type {
-    width: 5.5em;
-}
-.move-cat {
-    width: 5.7em;
-}
-.move-hits {
-    width: 4.5em;
+// .move-type {
+//     width: 5.5em;
+// }
+// .move-cat {
+//     width: 5.7em;
+// }
+// .move-hits {
+//     width: 4.5em;
+// }
+%crit-z-btn {
+  font-size: 0.8em;
+  height: 1em;
+  padding: 3px 3px;
 }
 .poke-info .crit-btn {
-    font-size: 0.8em;
-    width: 2.5em;
-    height: 1em;
-    padding: 3px 3px;
+  @extend %crit-z-btn;
+  width: 2.8em;
 }
 .poke-info .z-btn {
-    font-size: 0.8em;
-    width: 1.5em;
-    height: 1em;
-    padding: 3px 3px;
-} */
+  @extend %crit-z-btn;
+  width: 1.8em;
+}
+
 /* field info */
 
 #field-popup {
@@ -676,14 +679,13 @@ select.toxic-counter {
 .visually-hidden:focus + .btn, .btn:hover {
   z-index: 10;
   border-color: #777777;
-  background: #e3e3e3;
+  background: $grey-4;
 }
 
 .visually-hidden {
   &:checked + .btn {
     font-weight: bold;
-    color: #111111;
-    background: #f5f5f5;
+    background: $grey-4;
   }
   &[type="radio"]:checked + .btn {
     cursor: default;

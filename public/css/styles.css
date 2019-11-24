@@ -2154,6 +2154,7 @@ button {
     position: absolute;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 1;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1); }
@@ -2164,6 +2165,7 @@ button {
     position: absolute;
     width: 100%;
     top: 0;
+    right: 0;
     z-index: 1; }
   .gui .hp-wrap {
     width: 75%;
@@ -2411,7 +2413,6 @@ button {
     min-height: 1.75rem;
     margin-left: 2%; }
   .pokemon-moves label {
-    background-color: #F2F2F2;
     padding: 0.3rem 0;
     width: 8%;
     text-align: center; }
@@ -2437,27 +2438,17 @@ button {
 select.toxic-counter {
   width: 4.5rem; }
 
-/* .move-type {
-    width: 5.5em;
-}
-.move-cat {
-    width: 5.7em;
-}
-.move-hits {
-    width: 4.5em;
-}
+.poke-info .crit-btn, .poke-info .z-btn {
+  font-size: 0.8em;
+  height: 1em;
+  padding: 3px 3px; }
+
 .poke-info .crit-btn {
-    font-size: 0.8em;
-    width: 2.5em;
-    height: 1em;
-    padding: 3px 3px;
-}
+  width: 2.8em; }
+
 .poke-info .z-btn {
-    font-size: 0.8em;
-    width: 1.5em;
-    height: 1em;
-    padding: 3px 3px;
-} */
+  width: 1.8em; }
+
 /* field info */
 #field-popup {
   z-index: 3;
@@ -2580,7 +2571,7 @@ select.toxic-counter {
 .visually-hidden:focus + .btn, .btn:hover {
   z-index: 10;
   border-color: #777777;
-  background: #e3e3e3; }
+  background: #CCCCCC; }
 
 .visually-hidden {
   clip: rect(1px, 1px, 1px, 1px);
@@ -2594,8 +2585,7 @@ select.toxic-counter {
   /* https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe */ }
   .visually-hidden:checked + .btn {
     font-weight: bold;
-    color: #111111;
-    background: #f5f5f5; }
+    background: #CCCCCC; }
   .visually-hidden[type="radio"]:checked + .btn {
     cursor: default; }
   .visually-hidden:disabled + .btn {

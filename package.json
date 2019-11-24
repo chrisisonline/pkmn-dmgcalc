@@ -1,31 +1,21 @@
 {
-  "name": "pokemon-showdown-damage-calc",
+  "name": "cj-pokemon-damage-calc",
   "private": true,
-  "description": "The official damage calculator for the Pokémon Showdown battle simulator",
-  "version": "0.3.0",
+  "description": "A clean responsive design for Pokémon Showdown's damage calculator",
+  "version": "0.1.1",
   "scripts": {
     "test": "eslint --cache ."
   },
-  "homepage": "http://pokemonshowdown.com/calc",
+  "homepage": "http://christoperisonline.com/damagecalc",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Zarel/honko-damagecalc.git"
+    "url": "https://github.com/chrisisonline/Dmg-Calc-Redesign.git"
   },
   "author": {
-    "name": "Guangcong Luo",
-    "email": "zarel@zarel.com",
-    "url": "http://guangcongluo.com"
+    "name": "Christopher Jiang",
+    "email": "christopherjiang@outlook.com",
+    "url": "http://christopherisonline.com"
   },
-  "contributors": [
-    {
-      "name": "Mathieu Dias-Martins",
-      "email": "marty@hisemail.com"
-    },
-    {
-      "name": "Austin Couturier",
-      "email": "austincouturier@icloud.com"
-    }
-  ],
   "license": "MIT",
   "devDependencies": {
     "eslint": "^4.19.1",
@@ -40,5 +30,8 @@
     "gulp-connect": "^5.5.0",
     "gulp-minify": "^2.1.0",
     "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {
+    "prettier": "^1.19.1"
   }
 }
