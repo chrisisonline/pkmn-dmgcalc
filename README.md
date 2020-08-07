@@ -2,7 +2,7 @@ Chris's Redesign of Showdown's Damage Calculator
 =================================================
 
 Check out the original here!
-http://pokemonshowdown.com/damagecalc/
+https://chrisisonline.github.io/pkmn-dmgcalc/
 
 My workflow includes Node.js, Gulp and Sass
 
